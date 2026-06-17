@@ -66,7 +66,7 @@ func (p *Server) PingMetadataBackend(*pbtypes.Empty, *pbtypes.Empty) error {
 }
 
 func (p *EtcdClient) Ping() error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if _, err := p.GetAllValues(); err != nil {
 		logger.Warn(nil, "%+v", err)
@@ -77,7 +77,7 @@ func (p *EtcdClient) Ping() error {
 }
 
 func (p *Server) GetPilotConfig(in *pbtypes.Empty, out *pbtypes.PilotConfig) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -103,14 +103,14 @@ func (p *Server) GetPilotConfig(in *pbtypes.Empty, out *pbtypes.PilotConfig) err
 }
 
 func (p *Server) GetFrontgateConfig(in *pbtypes.Empty, out *pbtypes.FrontgateConfig) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	*out = *p.cfg.Get()
 	return nil
 }
 
 func (p *Server) SetFrontgateConfig(cfg *pbtypes.FrontgateConfig, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if reflect.DeepEqual(cfg, p.cfg.Get()) {
 		logger.Info(nil, "cfg is same, not changed")
@@ -150,7 +150,7 @@ func (p *Server) SetFrontgateConfig(cfg *pbtypes.FrontgateConfig, out *pbtypes.E
 }
 
 func (p *Server) SetFrontgateNodeConfig(cfg *pbtypes.FrontgateConfig, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if reflect.DeepEqual(cfg, p.cfg.Get()) {
 		return nil
@@ -170,7 +170,7 @@ func (p *Server) SetFrontgateNodeConfig(cfg *pbtypes.FrontgateConfig, out *pbtyp
 }
 
 func (p *Server) GetDroneList(in *pbtypes.Empty, out *pbtypes.DroneIdList) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	err := fmt.Errorf("TODO")
 	logger.Warn(nil, "%+v", err)
@@ -178,7 +178,7 @@ func (p *Server) GetDroneList(in *pbtypes.Empty, out *pbtypes.DroneIdList) error
 }
 
 func (p *Server) GetDroneConfig(in *pbtypes.DroneEndpoint, out *pbtypes.DroneConfig) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -202,7 +202,7 @@ func (p *Server) GetDroneConfig(in *pbtypes.DroneEndpoint, out *pbtypes.DroneCon
 }
 
 func (p *Server) SetDroneConfig(in *pbtypes.SetDroneConfigRequest, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -241,14 +241,14 @@ func (p *Server) SetDroneConfig(in *pbtypes.SetDroneConfigRequest, out *pbtypes.
 }
 
 func (p *Server) GetConfdConfig(in *pbtypes.ConfdEndpoint, out *pbtypes.ConfdConfig) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	*out = *p.cfg.Get().GetConfdConfig()
 	return nil
 }
 
 func (p *Server) IsConfdRunning(in *pbtypes.ConfdEndpoint, out *pbtypes.Bool) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -273,7 +273,7 @@ func (p *Server) IsConfdRunning(in *pbtypes.ConfdEndpoint, out *pbtypes.Bool) er
 }
 
 func (p *Server) StartConfd(in *pbtypes.ConfdEndpoint, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -309,7 +309,7 @@ func (p *Server) StartConfd(in *pbtypes.ConfdEndpoint, out *pbtypes.Empty) error
 }
 
 func (p *Server) StopConfd(in *pbtypes.ConfdEndpoint, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -330,7 +330,7 @@ func (p *Server) StopConfd(in *pbtypes.ConfdEndpoint, out *pbtypes.Empty) error 
 }
 
 func (p *Server) RegisterMetadata(in *pbtypes.SubTask_RegisterMetadata, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -356,7 +356,7 @@ func (p *Server) RegisterMetadata(in *pbtypes.SubTask_RegisterMetadata, out *pbt
 }
 
 func (p *Server) RegisterMetadataMapping(in *pbtypes.SubTask_RegisterMetadata, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -382,7 +382,7 @@ func (p *Server) RegisterMetadataMapping(in *pbtypes.SubTask_RegisterMetadata, o
 }
 
 func (p *EtcdClient) RegisterMetadata(in *pbtypes.SubTask_RegisterMetadata) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var m = map[string]interface{}{}
 	err := json.Unmarshal([]byte(in.Cnodes), &m)
@@ -401,7 +401,7 @@ func (p *EtcdClient) RegisterMetadata(in *pbtypes.SubTask_RegisterMetadata) erro
 }
 
 func (p *EtcdClient) RegisterMetadataMapping(in *pbtypes.SubTask_RegisterMetadata) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var m = map[string]interface{}{}
 	err := json.Unmarshal([]byte(in.Cnodes), &m)
@@ -421,7 +421,7 @@ func (p *EtcdClient) RegisterMetadataMapping(in *pbtypes.SubTask_RegisterMetadat
 }
 
 func (p *Server) DeregisterMetadata(in *pbtypes.SubTask_DeregisterMetadata, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -447,7 +447,7 @@ func (p *Server) DeregisterMetadata(in *pbtypes.SubTask_DeregisterMetadata, out 
 }
 
 func (p *Server) DeregisterMetadataMapping(in *pbtypes.SubTask_DeregisterMetadata, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -473,7 +473,7 @@ func (p *Server) DeregisterMetadataMapping(in *pbtypes.SubTask_DeregisterMetadat
 }
 
 func (p *EtcdClient) DeregisterMetadata(in *pbtypes.SubTask_DeregisterMetadata) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var m = map[string]interface{}{}
 	err := json.Unmarshal([]byte(in.Cnodes), &m)
@@ -497,7 +497,7 @@ func (p *EtcdClient) DeregisterMetadata(in *pbtypes.SubTask_DeregisterMetadata) 
 }
 
 func (p *EtcdClient) DeregisterMetadataMapping(in *pbtypes.SubTask_DeregisterMetadata) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var m = map[string]interface{}{}
 	err := json.Unmarshal([]byte(in.Cnodes), &m)
@@ -523,7 +523,7 @@ func (p *EtcdClient) DeregisterMetadataMapping(in *pbtypes.SubTask_DeregisterMet
 }
 
 func (p *Server) RegisterCmd(in *pbtypes.SubTask_RegisterCmd, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -549,7 +549,7 @@ func (p *Server) RegisterCmd(in *pbtypes.SubTask_RegisterCmd, out *pbtypes.Empty
 }
 
 func (p *EtcdClient) RegisterCmd(in *pbtypes.SubTask_RegisterCmd) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var m = map[string]interface{}{}
 	err := json.Unmarshal([]byte(in.Cnodes), &m)
@@ -568,7 +568,7 @@ func (p *EtcdClient) RegisterCmd(in *pbtypes.SubTask_RegisterCmd) error {
 }
 
 func (p *Server) DeregisterCmd(in *pbtypes.SubTask_DeregisterCmd, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -594,7 +594,7 @@ func (p *Server) DeregisterCmd(in *pbtypes.SubTask_DeregisterCmd, out *pbtypes.E
 }
 
 func (p *EtcdClient) DeregisterCmd(in *pbtypes.SubTask_DeregisterCmd) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var m = map[string]interface{}{}
 	err := json.Unmarshal([]byte(in.Cnodes), &m)
@@ -643,7 +643,7 @@ func (p *Server) ReportSubTaskStatus(in *pbtypes.SubTaskStatus, out *pbtypes.Emp
 }
 
 func (p *Server) ClosePilotChannel(in *pbtypes.Empty, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	err := p.conn.Close()
 	if err != nil {
@@ -655,7 +655,7 @@ func (p *Server) ClosePilotChannel(in *pbtypes.Empty, out *pbtypes.Empty) error 
 }
 
 func (p *Server) GetEtcdValuesByPrefix(in *pbtypes.String, out *pbtypes.StringMap) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -682,7 +682,7 @@ func (p *Server) GetEtcdValuesByPrefix(in *pbtypes.String, out *pbtypes.StringMa
 }
 
 func (p *Server) GetEtcdValues(in *pbtypes.StringList, out *pbtypes.StringMap) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -709,7 +709,7 @@ func (p *Server) GetEtcdValues(in *pbtypes.StringList, out *pbtypes.StringMap) e
 }
 
 func (p *Server) SetEtcdValues(in *pbtypes.StringMap, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	etcdConfig := p.cfg.Get().GetEtcdConfig()
 	etcdClient, err := p.etcd.GetClient(
@@ -735,7 +735,7 @@ func (p *Server) SetEtcdValues(in *pbtypes.StringMap, out *pbtypes.Empty) error 
 }
 
 func (p *Server) PingPilot(in *pbtypes.Empty, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -760,7 +760,7 @@ func (p *Server) PingPilot(in *pbtypes.Empty, out *pbtypes.Empty) error {
 }
 
 func (p *Server) PingFrontgate(in *pbtypes.Empty, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	cfg := p.cfg.Get()
 	if len(cfg.GetNodeList()) == 0 {
@@ -796,12 +796,12 @@ func (p *Server) PingFrontgate(in *pbtypes.Empty, out *pbtypes.Empty) error {
 }
 
 func (p *Server) PingFrontgateNode(in *pbtypes.Empty, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 	return nil // OK
 }
 
 func (p *Server) PingDrone(in *pbtypes.DroneEndpoint, out *pbtypes.Empty) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 
@@ -825,7 +825,7 @@ func (p *Server) PingDrone(in *pbtypes.DroneEndpoint, out *pbtypes.Empty) error 
 }
 
 func (p *Server) RunCommand(arg *pbtypes.RunCommandOnFrontgateRequest, out *pbtypes.String) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var c *exec.Cmd
 	if runtime.GOOS == "windows" {
@@ -864,7 +864,7 @@ func (p *Server) RunCommand(arg *pbtypes.RunCommandOnFrontgateRequest, out *pbty
 	return nil // OK
 }
 func (p *Server) RunCommandOnDrone(in *pbtypes.RunCommandOnDroneRequest, out *pbtypes.String) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	ctx := context.Background()
 

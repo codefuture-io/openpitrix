@@ -153,12 +153,12 @@ func (p *Server) PingMetadataBackend(context.Context, *pbtypes.FrontgateEndpoint
 }
 
 func (p *Server) GetDroneConfig(context.Context, *pbtypes.Empty) (*pbtypes.DroneConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	return p.cfg.Get(), nil
 }
 func (p *Server) SetDroneConfig(ctx context.Context, cfg *pbtypes.DroneConfig) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if reflect.DeepEqual(cfg, p.cfg.Get()) {
 		return &pbtypes.Empty{}, nil
@@ -178,13 +178,13 @@ func (p *Server) SetDroneConfig(ctx context.Context, cfg *pbtypes.DroneConfig) (
 }
 
 func (p *Server) GetConfdConfig(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.ConfdConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	return p.confd.GetConfig(), nil
 }
 
 func (p *Server) SetConfdConfig(ctx context.Context, arg *pbtypes.ConfdConfig) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	cfg := p.cfg.Get()
 	fnHookKeyAdjuster := func(absKey string) (realKey string) {
@@ -210,7 +210,7 @@ func (p *Server) SetConfdConfig(ctx context.Context, arg *pbtypes.ConfdConfig) (
 }
 
 func (p *Server) GetFrontgateConfig(context.Context, *pbtypes.Empty) (*pbtypes.FrontgateConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	cfg, err := p.fg.GetConfig()
 	if err != nil {
@@ -221,7 +221,7 @@ func (p *Server) GetFrontgateConfig(context.Context, *pbtypes.Empty) (*pbtypes.F
 }
 
 func (p *Server) SetFrontgateConfig(ctx context.Context, cfg *pbtypes.FrontgateConfig) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	err := p.fg.SetConfig(cfg)
 	if err != nil {
@@ -232,13 +232,13 @@ func (p *Server) SetFrontgateConfig(ctx context.Context, cfg *pbtypes.FrontgateC
 }
 
 func (p *Server) IsConfdRunning(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.Bool, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	return &pbtypes.Bool{Value: p.confd.IsRunning()}, nil
 }
 
 func (p *Server) StartConfd(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	cfg := p.cfg.Get()
 	logger.Info(nil, "StartConfd: %v", cfg)
@@ -325,7 +325,7 @@ func (p *Server) StartConfd(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.E
 }
 
 func (p *Server) StopConfd(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if err := p.confd.Stop(); err != nil {
 		logger.Error(nil, "StopConfd: %v", err)
@@ -336,7 +336,7 @@ func (p *Server) StopConfd(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.Em
 }
 
 func (p *Server) GetTemplateFiles(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.StringList, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if !p.confd.IsRunning() {
 		err := fmt.Errorf("drone: confd is not started")
@@ -367,7 +367,7 @@ func (p *Server) GetTemplateFiles(ctx context.Context, arg *pbtypes.Empty) (*pbt
 }
 
 func (p *Server) GetValues(ctx context.Context, arg *pbtypes.StringList) (*pbtypes.StringMap, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if !p.confd.IsRunning() {
 		err := fmt.Errorf("drone: confd is not started")
@@ -399,7 +399,7 @@ func (p *Server) GetValues(ctx context.Context, arg *pbtypes.StringList) (*pbtyp
 }
 
 func (p *Server) PingPilot(ctx context.Context, arg *pbtypes.FrontgateEndpoint) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	c, err := p.fg.getClient()
 	if err != nil {
@@ -417,7 +417,7 @@ func (p *Server) PingPilot(ctx context.Context, arg *pbtypes.FrontgateEndpoint) 
 }
 
 func (p *Server) PingFrontgate(ctx context.Context, arg *pbtypes.FrontgateEndpoint) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	c, err := p.fg.getClient()
 	if err != nil {
@@ -435,12 +435,12 @@ func (p *Server) PingFrontgate(ctx context.Context, arg *pbtypes.FrontgateEndpoi
 }
 
 func (p *Server) PingDrone(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 	return &pbtypes.Empty{}, nil
 }
 
 func (p *Server) RunCommand(ctx context.Context, arg *pbtypes.RunCommandOnDroneRequest) (*pbtypes.String, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	var c *exec.Cmd
 	if runtime.GOOS == "windows" {

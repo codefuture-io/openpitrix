@@ -4,7 +4,7 @@
 
 package etcd
 
-import recipe "go.etcd.io/etcd/contrib/recipes"
+import recipe "go.etcd.io/etcd/client/v3/experimental/recipes"
 
 type Queue struct {
 	*recipe.Queue

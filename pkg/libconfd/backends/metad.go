@@ -107,7 +107,7 @@ func (c *MetadClient) selectConnection() error {
 	if i >= maxTime {
 		return fmt.Errorf("fail to connect any backend.")
 	}
-	logger.Info(nil, "Using Metad URL: "+c.current.url)
+	logger.Info(nil, "Using Metad URL: %s", c.current.url)
 	return nil
 }
 
@@ -182,7 +182,7 @@ func treeWalk(root string, val interface{}, vars map[string]string) error {
 	case nil:
 		vars[root] = "null"
 	default:
-		logger.Error(nil, "Unknown type: "+reflect.TypeOf(val).Name())
+		logger.Error(nil, "Unknown type: %s", reflect.TypeOf(val).Name())
 	}
 	return nil
 }

@@ -7,11 +7,12 @@ package attachment
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"errors"
+	"io"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/aws/aws-sdk-go-v2/aws"
+	"github.com/aws/aws-sdk-go-v2/service/s3"
+	"github.com/aws/smithy-go"
 
 	"openpitrix.io/openpitrix/pkg/client/internals3"
 	"openpitrix.io/openpitrix/pkg/constants"
@@ -49,10 +50,17 @@ func removeAttachments(ctx context.Context, attachmentIds []string) error {
 	return err
 }
 
+func isNoSuchKey(err error) bool {
+	var apiErr smithy.APIError
+	if errors.As(err, &apiErr) {
+		return apiErr.ErrorCode() == "NoSuchKey"
+	}
+	return false
+}
+
 func listAttachmentFilenames(ctx context.Context, attachment *models.Attachment) ([]string, error) {
-	// with prefix
 	var filenames []string
-	output, err := internals3.S3.ListObjectsWithContext(ctx, &s3.ListObjectsInput{
+	output, err := internals3.S3.ListObjectsV2(ctx, &s3.ListObjectsV2Input{
 		Bucket: internals3.Bucket,
 		Prefix: aws.String(attachment.GetObjectPrefix()),
 	})
@@ -68,30 +76,26 @@ func listAttachmentFilenames(ctx context.Context, attachment *models.Attachment)
 }
 
 func deleteAttachmentFiles(ctx context.Context, attachment *models.Attachment, filename ...string) error {
-	// filenames with prefix
 	var filenames []string
 	var err error
-	// prepare object keys with prefix
 	if len(filename) == 0 {
 		filenames, err = listAttachmentFilenames(ctx, attachment)
 		if err != nil {
 			return err
 		}
 	} else {
-		// with prefix
 		for _, f := range filename {
 			filenames = append(filenames, f)
 		}
 	}
 
-	// delete object
 	for _, filename := range filenames {
-		_, err := internals3.S3.DeleteObjectWithContext(ctx, &s3.DeleteObjectInput{
+		_, err := internals3.S3.DeleteObject(ctx, &s3.DeleteObjectInput{
 			Bucket: internals3.Bucket,
 			Key:    aws.String(attachment.GetObjectName(filename)),
 		})
 		if err != nil {
-			if e, ok := err.(awserr.Error); ok && e.Code() == s3.ErrCodeNoSuchKey {
+			if isNoSuchKey(err) {
 				continue
 			}
 			return err
@@ -106,7 +110,7 @@ type contents interface {
 
 func putAttachmentFiles(ctx context.Context, attachment *models.Attachment, contents contents) error {
 	for filename, content := range contents.GetAttachmentContent() {
-		_, err := internals3.S3.PutObjectWithContext(ctx, &s3.PutObjectInput{
+		_, err := internals3.S3.PutObject(ctx, &s3.PutObjectInput{
 			Bucket: internals3.Bucket,
 			Key:    aws.String(attachment.GetObjectName(filename)),
 			Body:   bytes.NewReader(content),
@@ -124,7 +128,7 @@ type getAttachmentReq interface {
 }
 
 func getFile(ctx context.Context, attachment *models.Attachment, filename string) (*s3.GetObjectOutput, error) {
-	return internals3.S3.GetObjectWithContext(ctx, &s3.GetObjectInput{
+	return internals3.S3.GetObject(ctx, &s3.GetObjectInput{
 		Bucket: internals3.Bucket,
 		Key:    aws.String(attachment.GetObjectName(filename)),
 	})
@@ -135,10 +139,8 @@ func getAttachmentFiles(ctx context.Context, attachments []*models.Attachment, r
 	var pbAtts []*pb.Attachment
 	for _, a := range attachments {
 		var attachmentContent = make(map[string][]byte)
-		// filenames with prefix
 		var filenames []string
 
-		// prepare object keys with prefix
 		if len(req.GetFilename()) == 0 {
 			filenames, err = listAttachmentFilenames(ctx, a)
 			if err != nil {
@@ -150,7 +152,6 @@ func getAttachmentFiles(ctx context.Context, attachments []*models.Attachment, r
 			}
 		}
 
-		// get object content
 		for _, filename := range filenames {
 			var content []byte
 			if req.GetIgnoreContent() {
@@ -159,12 +160,12 @@ func getAttachmentFiles(ctx context.Context, attachments []*models.Attachment, r
 			}
 			output, err := getFile(ctx, a, filename)
 			if err != nil {
-				if e, ok := err.(awserr.Error); ok && e.Code() == s3.ErrCodeNoSuchKey {
+				if isNoSuchKey(err) {
 					continue
 				}
 				return nil, err
 			}
-			content, err = ioutil.ReadAll(output.Body)
+			content, err = io.ReadAll(output.Body)
 			if err != nil {
 				return nil, err
 			}

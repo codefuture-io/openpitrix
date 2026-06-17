@@ -7,10 +7,7 @@ package attachment
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
-
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"io"
 
 	"openpitrix.io/openpitrix/pkg/constants"
 	"openpitrix.io/openpitrix/pkg/models"
@@ -133,12 +130,12 @@ func (p *Server) GetAttachment(ctx context.Context, req *pb.GetAttachmentRequest
 	}
 	output, err := getFile(ctx, attachment, req.Filename)
 	if err != nil {
-		if e, ok := err.(awserr.Error); ok && e.Code() == s3.ErrCodeNoSuchKey {
+		if isNoSuchKey(err) {
 			return content, nil
 		}
 		return content, err
 	}
-	file, err := ioutil.ReadAll(output.Body)
+	file, err := io.ReadAll(output.Body)
 	if err != nil {
 		return nil, err
 	}

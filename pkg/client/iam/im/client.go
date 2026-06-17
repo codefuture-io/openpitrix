@@ -5,7 +5,7 @@
 package im
 
 import (
-	pbim "kubesphere.io/im/pkg/pb"
+	pbim "codefuture.io/im/pkg/pb"
 
 	"openpitrix.io/openpitrix/pkg/constants"
 	"openpitrix.io/openpitrix/pkg/manager"

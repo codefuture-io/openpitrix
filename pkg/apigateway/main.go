@@ -116,11 +116,11 @@ func log() gin.HandlerFunc {
 
 		switch {
 		case statusCode >= 400 && statusCode <= 499:
-			l.Warn(nil, logStr)
+			l.Warn(nil, "%s", logStr)
 		case statusCode >= 500:
-			l.Error(nil, logStr)
+			l.Error(nil, "%s", logStr)
 		default:
-			l.Info(nil, logStr)
+			l.Info(nil, "%s", logStr)
 		}
 	}
 }

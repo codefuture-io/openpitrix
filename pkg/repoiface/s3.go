@@ -8,15 +8,14 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"io/ioutil"
+	"io"
 	neturl "net/url"
 	"path"
 	"strings"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/aws/aws-sdk-go-v2/aws"
+	"github.com/aws/aws-sdk-go-v2/credentials"
+	"github.com/aws/aws-sdk-go-v2/service/s3"
 
 	"openpitrix.io/openpitrix/pkg/logger"
 	"openpitrix.io/openpitrix/pkg/util/jsonutil"
@@ -28,7 +27,8 @@ type S3Interface struct {
 	secretAccessKey string
 	bucket          string
 	prefix          string
-	config          *aws.Config
+	endpoint        string
+	config          aws.Config
 }
 
 type S3Credential struct {
@@ -55,7 +55,7 @@ func NewS3Interface(ctx context.Context, u *neturl.URL, credential string) (*S3I
 	secretAccessKey := s3Credential.SecretAccessKey
 
 	// e.g. s3://s3.us-east-2.amazonaws.com/my-openpitrix
-	creds := credentials.NewStaticCredentials(accessKeyId, secretAccessKey, "")
+	creds := credentials.NewStaticCredentialsProvider(accessKeyId, secretAccessKey, "")
 	var region, endpoint, bucket, prefix string
 	bucket, prefix = getBucketPrefix(u.Path)
 
@@ -68,31 +68,29 @@ func NewS3Interface(ctx context.Context, u *neturl.URL, credential string) (*S3I
 		endpoint = fmt.Sprintf("http://%s", u.Host)
 	}
 
-	config := &aws.Config{
-		Region:           aws.String(region),
-		Endpoint:         aws.String(endpoint),
-		DisableSSL:       aws.Bool(strings.HasPrefix(endpoint, "http://")),
-		S3ForcePathStyle: aws.Bool(endpoint != ""),
-		Credentials:      creds,
+	cfg := aws.Config{
+		Region:      region,
+		Credentials: creds,
 	}
 	return &S3Interface{
 		url:             u,
 		accessKeyId:     accessKeyId,
 		secretAccessKey: secretAccessKey,
-		config:          config,
+		config:          cfg,
 		bucket:          bucket,
 		prefix:          prefix,
+		endpoint:        endpoint,
 	}, nil
 }
 
-func (i *S3Interface) getService(ctx context.Context) (*s3.S3, error) {
-	sess, err := session.NewSession(i.config)
-	if err != nil {
-		logger.Error(ctx, "Connect to s3 [%s] failed: %+v", i.url, err)
-		return nil, err
-	}
-	svc := s3.New(sess)
-	return svc, err
+func (i *S3Interface) getService(ctx context.Context) (*s3.Client, error) {
+	svc := s3.NewFromConfig(i.config, func(o *s3.Options) {
+		o.UsePathStyle = i.endpoint != ""
+		if i.endpoint != "" {
+			o.BaseEndpoint = aws.String(i.endpoint)
+		}
+	})
+	return svc, nil
 }
 
 func (i *S3Interface) CheckFile(ctx context.Context, filename string) (bool, error) {
@@ -101,7 +99,7 @@ func (i *S3Interface) CheckFile(ctx context.Context, filename string) (bool, err
 		return false, err
 	}
 
-	_, err = svc.HeadObject(&s3.HeadObjectInput{
+	_, err = svc.HeadObject(ctx, &s3.HeadObjectInput{
 		Bucket: aws.String(i.bucket),
 		Key:    aws.String(path.Join(i.prefix, GetFileName(filename))),
 	})
@@ -119,7 +117,7 @@ func (i *S3Interface) ReadFile(ctx context.Context, filename string) ([]byte, er
 		return nil, err
 	}
 
-	output, err := svc.GetObject(&s3.GetObjectInput{
+	output, err := svc.GetObject(ctx, &s3.GetObjectInput{
 		Bucket: aws.String(i.bucket),
 		Key:    aws.String(path.Join(i.prefix, GetFileName(filename))),
 	})
@@ -128,7 +126,7 @@ func (i *S3Interface) ReadFile(ctx context.Context, filename string) ([]byte, er
 		return nil, err
 	}
 
-	body, err := ioutil.ReadAll(output.Body)
+	body, err := io.ReadAll(output.Body)
 	if err != nil {
 		return nil, err
 	}
@@ -141,7 +139,7 @@ func (i *S3Interface) DeleteFile(ctx context.Context, filename string) error {
 		return err
 	}
 
-	_, err = svc.DeleteObject(&s3.DeleteObjectInput{
+	_, err = svc.DeleteObject(ctx, &s3.DeleteObjectInput{
 		Bucket: aws.String(i.bucket),
 		Key:    aws.String(path.Join(i.prefix, GetFileName(filename))),
 	})
@@ -159,7 +157,7 @@ func (i *S3Interface) WriteFile(ctx context.Context, filename string, data []byt
 		return err
 	}
 
-	_, err = svc.PutObject(&s3.PutObjectInput{
+	_, err = svc.PutObject(ctx, &s3.PutObjectInput{
 		Bucket: aws.String(i.bucket),
 		Key:    aws.String(path.Join(i.prefix, GetFileName(filename))),
 		Body:   bytes.NewReader(data),
@@ -177,7 +175,7 @@ func (i *S3Interface) CheckRead(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
-	_, err = svc.HeadBucket(&s3.HeadBucketInput{
+	_, err = svc.HeadBucket(ctx, &s3.HeadBucketInput{
 		Bucket: aws.String(i.bucket),
 	})
 	if err != nil {

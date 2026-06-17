@@ -121,7 +121,7 @@ func (g *GrpcServer) Serve(callback RegisterCallback, opt ...grpc.ServerOption) 
 			grpc_recovery.UnaryServerInterceptor(
 				grpc_recovery.WithRecoveryHandler(func(p interface{}) error {
 					logger.Critical(nil, "GRPC server recovery with error: %+v", p)
-					logger.Critical(nil, string(debug.Stack()))
+					logger.Critical(nil, "%s", string(debug.Stack()))
 					if e, ok := p.(error); ok {
 						return gerr.NewWithDetail(nil, gerr.Internal, e, gerr.ErrorInternalError)
 					}
@@ -133,7 +133,7 @@ func (g *GrpcServer) Serve(callback RegisterCallback, opt ...grpc.ServerOption) 
 			grpc_recovery.StreamServerInterceptor(
 				grpc_recovery.WithRecoveryHandler(func(p interface{}) error {
 					logger.Critical(nil, "GRPC server recovery with error: %+v", p)
-					logger.Critical(nil, string(debug.Stack()))
+					logger.Critical(nil, "%s", string(debug.Stack()))
 					if e, ok := p.(error); ok {
 						return gerr.NewWithDetail(nil, gerr.Internal, e, gerr.ErrorInternalError)
 					}

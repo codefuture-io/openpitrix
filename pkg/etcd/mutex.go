@@ -7,7 +7,7 @@ package etcd
 import (
 	"context"
 
-	"go.etcd.io/etcd/clientv3/concurrency"
+	"go.etcd.io/etcd/client/v3/concurrency"
 )
 
 type Mutex struct {

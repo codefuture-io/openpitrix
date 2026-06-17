@@ -45,7 +45,7 @@ func (p *Server) GetDroneVersion(context.Context, *pbtypes.DroneEndpoint) (*pbty
 }
 
 func (p *Server) PingMetadataBackend(ctx context.Context, arg *pbtypes.FrontgateId) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.Id)
 	if err != nil {
@@ -69,13 +69,13 @@ func (p *Server) PingMetadataBackend(ctx context.Context, arg *pbtypes.Frontgate
 }
 
 func (p *Server) GetPilotConfig(context.Context, *pbtypes.Empty) (*pbtypes.PilotConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	return proto.Clone(p.cfg).(*pbtypes.PilotConfig), nil
 }
 
 func (p *Server) GetPilotClientTLSConfig(context.Context, *pbtypes.Empty) (*pbtypes.PilotClientTLSConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	cfg := &pbtypes.PilotClientTLSConfig{
 		CaCrtData:       p.pbTlsCfg.CaCrtData,
@@ -88,13 +88,13 @@ func (p *Server) GetPilotClientTLSConfig(context.Context, *pbtypes.Empty) (*pbty
 }
 
 func (p *Server) GetFrontgateList(context.Context, *pbtypes.Empty) (*pbtypes.FrontgateIdList, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	return nil, fmt.Errorf("TODO")
 }
 
 func (p *Server) GetFrontgateConfig(ctx context.Context, arg *pbtypes.FrontgateId) (*pbtypes.FrontgateConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.Id)
 	if err != nil {
@@ -118,7 +118,7 @@ func (p *Server) GetFrontgateConfig(ctx context.Context, arg *pbtypes.FrontgateI
 }
 
 func (p *Server) SetFrontgateConfig(ctx context.Context, arg *pbtypes.FrontgateConfig) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.Id)
 	if err != nil {
@@ -142,7 +142,7 @@ func (p *Server) SetFrontgateConfig(ctx context.Context, arg *pbtypes.FrontgateC
 }
 
 func (p *Server) GetDroneConfig(ctx context.Context, arg *pbtypes.DroneEndpoint) (*pbtypes.DroneConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -165,7 +165,7 @@ func (p *Server) GetDroneConfig(ctx context.Context, arg *pbtypes.DroneEndpoint)
 	return reply, nil
 }
 func (p *Server) SetDroneConfig(ctx context.Context, arg *pbtypes.SetDroneConfigRequest) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.Endpoint.FrontgateId)
 	if err != nil {
@@ -189,7 +189,7 @@ func (p *Server) SetDroneConfig(ctx context.Context, arg *pbtypes.SetDroneConfig
 }
 
 func (p *Server) FrontgateChannel(ch pbpilot.PilotServiceForFrontgate_FrontgateChannelServer) error {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	c := pbfrontgate.NewFrontgateServiceClient(
 		pilotutil.NewFrontgateChannelFromServer(ch),
@@ -207,7 +207,7 @@ func (p *Server) FrontgateChannel(ch pbpilot.PilotServiceForFrontgate_FrontgateC
 }
 
 func (p *Server) GetConfdConfig(ctx context.Context, arg *pbtypes.ConfdEndpoint) (*pbtypes.ConfdConfig, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -234,7 +234,7 @@ func (p *Server) GetConfdConfig(ctx context.Context, arg *pbtypes.ConfdEndpoint)
 }
 
 func (p *Server) IsConfdRunning(ctx context.Context, arg *pbtypes.DroneEndpoint) (*pbtypes.Bool, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -261,7 +261,7 @@ func (p *Server) IsConfdRunning(ctx context.Context, arg *pbtypes.DroneEndpoint)
 }
 
 func (p *Server) StartConfd(ctx context.Context, arg *pbtypes.DroneEndpoint) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -288,7 +288,7 @@ func (p *Server) StartConfd(ctx context.Context, arg *pbtypes.DroneEndpoint) (*p
 }
 
 func (p *Server) StopConfd(ctx context.Context, arg *pbtypes.DroneEndpoint) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -315,7 +315,7 @@ func (p *Server) StopConfd(ctx context.Context, arg *pbtypes.DroneEndpoint) (*pb
 }
 
 func (p *Server) RegisterMetadata(ctx context.Context, arg *pbtypes.SubTask_RegisterMetadata) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -339,7 +339,7 @@ func (p *Server) RegisterMetadata(ctx context.Context, arg *pbtypes.SubTask_Regi
 }
 
 func (p *Server) DeregisterMetadata(ctx context.Context, arg *pbtypes.SubTask_DeregisterMetadata) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -363,7 +363,7 @@ func (p *Server) DeregisterMetadata(ctx context.Context, arg *pbtypes.SubTask_De
 }
 
 func (p *Server) RegisterMetadataMapping(ctx context.Context, arg *pbtypes.SubTask_RegisterMetadata) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -387,7 +387,7 @@ func (p *Server) RegisterMetadataMapping(ctx context.Context, arg *pbtypes.SubTa
 }
 
 func (p *Server) DeregisterMetadataMapping(ctx context.Context, arg *pbtypes.SubTask_DeregisterMetadata) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -411,7 +411,7 @@ func (p *Server) DeregisterMetadataMapping(ctx context.Context, arg *pbtypes.Sub
 }
 
 func (p *Server) RegisterCmd(ctx context.Context, arg *pbtypes.SubTask_RegisterCmd) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -435,7 +435,7 @@ func (p *Server) RegisterCmd(ctx context.Context, arg *pbtypes.SubTask_RegisterC
 }
 
 func (p *Server) DeregisterCmd(ctx context.Context, arg *pbtypes.SubTask_DeregisterCmd) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -466,7 +466,7 @@ func (p *Server) ReportSubTaskStatus(ctx context.Context, arg *pbtypes.SubTaskSt
 }
 
 func (p *Server) GetSubtaskStatus(ctx context.Context, arg *pbtypes.SubTaskId) (*pbtypes.SubTaskStatus, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	if s, ok := p.taskStatusMgr.GetStatus(arg.TaskId); ok {
 		return &s, nil
@@ -478,7 +478,7 @@ func (p *Server) GetSubtaskStatus(ctx context.Context, arg *pbtypes.SubTaskId) (
 }
 
 func (p *Server) HandleSubtask(ctx context.Context, msg *pbtypes.SubTaskMessage) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	switch msg.Action {
 	case pbtypes.SubTaskAction_StartConfd.String():
@@ -735,13 +735,13 @@ func (p *Server) HandleSubtask(ctx context.Context, msg *pbtypes.SubTaskMessage)
 }
 
 func (p *Server) PingPilot(ctx context.Context, arg *pbtypes.Empty) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	return &pbtypes.Empty{}, nil
 }
 
 func (p *Server) PingFrontgate(ctx context.Context, arg *pbtypes.FrontgateId) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.Id)
 	if err != nil {
@@ -765,7 +765,7 @@ func (p *Server) PingFrontgate(ctx context.Context, arg *pbtypes.FrontgateId) (*
 }
 
 func (p *Server) PingFrontgateNode(ctx context.Context, arg *pbtypes.FrontgateNodeId) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetNodeClient(arg.Id, arg.NodeId)
 	if err != nil {
@@ -789,7 +789,7 @@ func (p *Server) PingFrontgateNode(ctx context.Context, arg *pbtypes.FrontgateNo
 }
 
 func (p *Server) PingDrone(ctx context.Context, arg *pbtypes.DroneEndpoint) (*pbtypes.Empty, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.FrontgateId)
 	if err != nil {
@@ -817,7 +817,7 @@ func (p *Server) PingDrone(ctx context.Context, arg *pbtypes.DroneEndpoint) (*pb
 }
 
 func (p *Server) RunCommandOnFrontgateNode(ctx context.Context, arg *pbtypes.RunCommandOnFrontgateRequest) (*pbtypes.String, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetNodeClient(
 		arg.GetEndpoint().GetFrontgateId(),
@@ -844,7 +844,7 @@ func (p *Server) RunCommandOnFrontgateNode(ctx context.Context, arg *pbtypes.Run
 }
 
 func (p *Server) RunCommandOnDrone(ctx context.Context, arg *pbtypes.RunCommandOnDroneRequest) (*pbtypes.String, error) {
-	logger.Info(nil, funcutil.CallerName(1))
+	logger.Info(nil, "%s", funcutil.CallerName(1))
 
 	client, err := p.fgClientMgr.GetClient(arg.GetEndpoint().GetFrontgateId())
 	if err != nil {

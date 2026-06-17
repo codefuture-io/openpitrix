@@ -126,7 +126,7 @@ func (i *EventController) ExecuteEvent(ctx context.Context, repoEvent *models.Re
 			return
 		}
 		if res.Failed {
-			err = fmt.Errorf(res.Result)
+			err = fmt.Errorf("%s", res.Result)
 			logger.Error(ctx, "Failed to index repo [%s], %+v", repoId, err)
 		}
 		return

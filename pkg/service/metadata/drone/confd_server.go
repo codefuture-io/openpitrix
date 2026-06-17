@@ -115,7 +115,7 @@ func (p *ConfdServer) Start(opts ...libconfd.Options) error {
 		// metad: OK
 	default:
 		s := p.backendConfig.Type
-		logger.Error(nil, "ConfdServer: unsupport confd backend: "+s)
+		logger.Error(nil, "ConfdServer: unsupport confd backend: %s", s)
 		return fmt.Errorf("drone: unsupport confd backend: %s", s)
 	}
 

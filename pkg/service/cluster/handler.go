@@ -1255,7 +1255,7 @@ func (p *Server) AddClusterNodes(ctx context.Context, req *pb.AddClusterNodesReq
 	}
 
 	for i := 1; i <= count; i++ {
-		clusterWrapper.ClusterNodesWithKeyPairs[string(i)] = &models.ClusterNodeWithKeyPairs{
+		clusterWrapper.ClusterNodesWithKeyPairs[strconv.Itoa(i)] = &models.ClusterNodeWithKeyPairs{
 			ClusterNode: &models.ClusterNode{
 				Status: constants.StatusPending,
 				Role:   role,

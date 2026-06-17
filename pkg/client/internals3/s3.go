@@ -5,37 +5,33 @@
 package internals3
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/aws/aws-sdk-go-v2/aws"
+	"github.com/aws/aws-sdk-go-v2/credentials"
+	"github.com/aws/aws-sdk-go-v2/service/s3"
 
 	opconfig "openpitrix.io/openpitrix/pkg/config"
 )
 
 var aConf = opconfig.GetConf().Attachment
 
-var creds = credentials.NewStaticCredentials(
+var creds = credentials.NewStaticCredentialsProvider(
 	aConf.AccessKey,
 	aConf.SecretKey,
-	"")
+	"",
+)
 
-var config = &aws.Config{
-	Region:           aws.String("us-east-1"),
-	Endpoint:         aws.String(aConf.Endpoint),
-	DisableSSL:       aws.Bool(true),
-	S3ForcePathStyle: aws.Bool(true),
-	Credentials:      creds,
+var cfg = aws.Config{
+	Region:      "us-east-1",
+	Credentials: creds,
 }
 
 var Bucket = aws.String(aConf.BucketName)
 
-var S3 *s3.S3
+var S3 *s3.Client
 
 func init() {
-	sess, err := session.NewSession(config)
-	if err != nil {
-		panic(err)
-	}
-	S3 = s3.New(sess)
+	S3 = s3.NewFromConfig(cfg, func(o *s3.Options) {
+		o.BaseEndpoint = aws.String(aConf.Endpoint)
+		o.UsePathStyle = true
+	})
 }

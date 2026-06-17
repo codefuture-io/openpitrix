@@ -93,7 +93,6 @@ func SplitJobIntoTasks(ctx context.Context, job *models.Job, advancedParam ...st
 		logger.Error(ctx, "Unknown job action [%s]", job.JobAction)
 		return nil, fmt.Errorf("unknown job action [%s]", job.JobAction)
 	}
-	return nil, nil
 }
 
 func GetFrameInterface(ctx context.Context, job *models.Job, advancedParam ...string) (FrameInterface, error) {
