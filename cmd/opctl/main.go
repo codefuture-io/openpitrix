@@ -11,10 +11,10 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"openpitrix.io/openpitrix/pkg/client/config"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
-	"openpitrix.io/openpitrix/test/client"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/pkg/client/config"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/test/client"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 type Flag struct {

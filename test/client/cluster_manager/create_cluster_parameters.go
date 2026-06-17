@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateClusterParams creates a new CreateClusterParams object
@@ -59,7 +59,8 @@ func NewCreateClusterParamsWithHTTPClient(client *http.Client) *CreateClusterPar
 	}
 }
 
-/*CreateClusterParams contains all the parameters to send to the API endpoint
+/*
+CreateClusterParams contains all the parameters to send to the API endpoint
 for the create cluster operation typically these are written to a http.Request
 */
 type CreateClusterParams struct {

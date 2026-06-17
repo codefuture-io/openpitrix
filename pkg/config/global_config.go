@@ -9,9 +9,9 @@ import (
 	"regexp"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/util/yamlutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/util/yamlutil"
 )
 
 type GlobalConfig struct {

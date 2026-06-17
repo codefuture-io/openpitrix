@@ -7,14 +7,14 @@ package categoryutil
 import (
 	"context"
 
-	clientutil "openpitrix.io/openpitrix/pkg/client"
-	categoryclient "openpitrix.io/openpitrix/pkg/client/category"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	clientutil "github.com/codefuture-io/openpitrix/pkg/client"
+	categoryclient "github.com/codefuture-io/openpitrix/pkg/client/category"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 func GetResourcesCategories(ctx context.Context, d *db.Conn, resourceIds []string) (map[string][]*pb.ResourceCategory, error) {

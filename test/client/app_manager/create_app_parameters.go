@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateAppParams creates a new CreateAppParams object
@@ -59,7 +59,8 @@ func NewCreateAppParamsWithHTTPClient(client *http.Client) *CreateAppParams {
 	}
 }
 
-/*CreateAppParams contains all the parameters to send to the API endpoint
+/*
+CreateAppParams contains all the parameters to send to the API endpoint
 for the create app operation typically these are written to a http.Request
 */
 type CreateAppParams struct {

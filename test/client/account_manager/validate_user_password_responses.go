@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ValidateUserPasswordReader is a Reader for the ValidateUserPassword structure.
@@ -42,7 +42,8 @@ func NewValidateUserPasswordOK() *ValidateUserPasswordOK {
 	return &ValidateUserPasswordOK{}
 }
 
-/*ValidateUserPasswordOK handles this case with default header values.
+/*
+ValidateUserPasswordOK handles this case with default header values.
 
 A successful response.
 */

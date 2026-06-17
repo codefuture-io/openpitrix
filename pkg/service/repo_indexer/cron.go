@@ -9,14 +9,14 @@ import (
 
 	"github.com/robfig/cron"
 
-	"openpitrix.io/openpitrix/pkg/client"
-	repoClient "openpitrix.io/openpitrix/pkg/client/repo"
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/client"
+	repoClient "github.com/codefuture-io/openpitrix/pkg/client/repo"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
 )
 
 type repoInfos map[string]string // repoId & ownerPath

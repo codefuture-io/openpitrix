@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // StartClustersReader is a Reader for the StartClusters structure.
@@ -42,7 +42,8 @@ func NewStartClustersOK() *StartClustersOK {
 	return &StartClustersOK{}
 }
 
-/*StartClustersOK handles this case with default header values.
+/*
+StartClustersOK handles this case with default header values.
 
 A successful response.
 */

@@ -14,7 +14,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
 )
 
 type Level uint32

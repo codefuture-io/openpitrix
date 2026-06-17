@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCeaseClustersParams creates a new CeaseClustersParams object
@@ -59,7 +59,8 @@ func NewCeaseClustersParamsWithHTTPClient(client *http.Client) *CeaseClustersPar
 	}
 }
 
-/*CeaseClustersParams contains all the parameters to send to the API endpoint
+/*
+CeaseClustersParams contains all the parameters to send to the API endpoint
 for the cease clusters operation typically these are written to a http.Request
 */
 type CeaseClustersParams struct {

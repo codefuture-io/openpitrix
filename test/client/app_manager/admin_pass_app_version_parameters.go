@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewAdminPassAppVersionParams creates a new AdminPassAppVersionParams object
@@ -59,7 +59,8 @@ func NewAdminPassAppVersionParamsWithHTTPClient(client *http.Client) *AdminPassA
 	}
 }
 
-/*AdminPassAppVersionParams contains all the parameters to send to the API endpoint
+/*
+AdminPassAppVersionParams contains all the parameters to send to the API endpoint
 for the admin pass app version operation typically these are written to a http.Request
 */
 type AdminPassAppVersionParams struct {

@@ -6,19 +6,19 @@
 package main
 
 import (
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/service/app"
-	"openpitrix.io/openpitrix/pkg/service/attachment"
-	"openpitrix.io/openpitrix/pkg/service/category"
-	"openpitrix.io/openpitrix/pkg/service/cluster"
-	"openpitrix.io/openpitrix/pkg/service/helm"
-	"openpitrix.io/openpitrix/pkg/service/isv"
-	"openpitrix.io/openpitrix/pkg/service/job"
-	"openpitrix.io/openpitrix/pkg/service/repo"
-	"openpitrix.io/openpitrix/pkg/service/repo_indexer"
-	"openpitrix.io/openpitrix/pkg/service/runtime"
-	"openpitrix.io/openpitrix/pkg/service/runtime_provider"
-	"openpitrix.io/openpitrix/pkg/service/task"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/service/app"
+	"github.com/codefuture-io/openpitrix/pkg/service/attachment"
+	"github.com/codefuture-io/openpitrix/pkg/service/category"
+	"github.com/codefuture-io/openpitrix/pkg/service/cluster"
+	"github.com/codefuture-io/openpitrix/pkg/service/helm"
+	"github.com/codefuture-io/openpitrix/pkg/service/isv"
+	"github.com/codefuture-io/openpitrix/pkg/service/job"
+	"github.com/codefuture-io/openpitrix/pkg/service/repo"
+	"github.com/codefuture-io/openpitrix/pkg/service/repo_indexer"
+	"github.com/codefuture-io/openpitrix/pkg/service/runtime"
+	"github.com/codefuture-io/openpitrix/pkg/service/runtime_provider"
+	"github.com/codefuture-io/openpitrix/pkg/service/task"
 )
 
 func getConf(database string) *config.Config {

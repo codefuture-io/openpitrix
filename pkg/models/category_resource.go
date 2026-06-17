@@ -7,7 +7,7 @@ package models
 import (
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/db"
 )
 
 type CategoryResource struct {

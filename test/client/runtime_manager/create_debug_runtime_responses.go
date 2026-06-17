@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateDebugRuntimeReader is a Reader for the CreateDebugRuntime structure.
@@ -42,7 +42,8 @@ func NewCreateDebugRuntimeOK() *CreateDebugRuntimeOK {
 	return &CreateDebugRuntimeOK{}
 }
 
-/*CreateDebugRuntimeOK handles this case with default header values.
+/*
+CreateDebugRuntimeOK handles this case with default header values.
 
 A successful response.
 */

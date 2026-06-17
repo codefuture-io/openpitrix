@@ -9,9 +9,9 @@ import (
 	"net/http"
 	"strings"
 
-	attachmentclient "openpitrix.io/openpitrix/pkg/client/attachment"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pb"
+	attachmentclient "github.com/codefuture-io/openpitrix/pkg/client/attachment"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
 )
 
 func ServeAttachments(prefix string) http.Handler {

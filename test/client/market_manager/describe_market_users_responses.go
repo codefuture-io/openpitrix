@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeMarketUsersReader is a Reader for the DescribeMarketUsers structure.
@@ -42,7 +42,8 @@ func NewDescribeMarketUsersOK() *DescribeMarketUsersOK {
 	return &DescribeMarketUsersOK{}
 }
 
-/*DescribeMarketUsersOK handles this case with default header values.
+/*
+DescribeMarketUsersOK handles this case with default header values.
 
 A successful response.
 */

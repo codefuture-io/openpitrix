@@ -8,7 +8,7 @@ import (
 	"context"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 type callback func() error

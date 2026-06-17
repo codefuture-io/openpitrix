@@ -10,7 +10,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"openpitrix.io/openpitrix/pkg/util/jwtutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jwtutil"
 )
 
 func getJwtCmd() *cobra.Command {

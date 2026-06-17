@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewUserLeaveMarketParams creates a new UserLeaveMarketParams object
@@ -59,7 +59,8 @@ func NewUserLeaveMarketParamsWithHTTPClient(client *http.Client) *UserLeaveMarke
 	}
 }
 
-/*UserLeaveMarketParams contains all the parameters to send to the API endpoint
+/*
+UserLeaveMarketParams contains all the parameters to send to the API endpoint
 for the user leave market operation typically these are written to a http.Request
 */
 type UserLeaveMarketParams struct {

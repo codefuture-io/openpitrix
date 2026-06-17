@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 type DbTestConfig struct {

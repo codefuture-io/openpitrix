@@ -7,14 +7,14 @@ package account
 import (
 	"context"
 
-	pbam "openpitrix.io/iam/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/client/iam/am"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	pbam "github.com/codefuture-io/iam/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/client/iam/am"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 var (

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewModifyMarketParams creates a new ModifyMarketParams object
@@ -59,7 +59,8 @@ func NewModifyMarketParamsWithHTTPClient(client *http.Client) *ModifyMarketParam
 	}
 }
 
-/*ModifyMarketParams contains all the parameters to send to the API endpoint
+/*
+ModifyMarketParams contains all the parameters to send to the API endpoint
 for the modify market operation typically these are written to a http.Request
 */
 type ModifyMarketParams struct {

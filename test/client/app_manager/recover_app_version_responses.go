@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // RecoverAppVersionReader is a Reader for the RecoverAppVersion structure.
@@ -42,7 +42,8 @@ func NewRecoverAppVersionOK() *RecoverAppVersionOK {
 	return &RecoverAppVersionOK{}
 }
 
-/*RecoverAppVersionOK handles this case with default header values.
+/*
+RecoverAppVersionOK handles this case with default header values.
 
 A successful response.
 */

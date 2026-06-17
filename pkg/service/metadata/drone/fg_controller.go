@@ -12,10 +12,10 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbfrontgate "openpitrix.io/openpitrix/pkg/pb/metadata/frontgate"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbfrontgate "github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
 )
 
 type FrontgateController struct {

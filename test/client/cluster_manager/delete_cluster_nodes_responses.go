@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteClusterNodesReader is a Reader for the DeleteClusterNodes structure.
@@ -42,7 +42,8 @@ func NewDeleteClusterNodesOK() *DeleteClusterNodesOK {
 	return &DeleteClusterNodesOK{}
 }
 
-/*DeleteClusterNodesOK handles this case with default header values.
+/*
+DeleteClusterNodesOK handles this case with default header values.
 
 A successful response.
 */

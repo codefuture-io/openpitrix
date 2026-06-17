@@ -17,8 +17,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type S3Interface struct {

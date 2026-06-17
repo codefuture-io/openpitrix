@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewModifyUserParams creates a new ModifyUserParams object
@@ -59,7 +59,8 @@ func NewModifyUserParamsWithHTTPClient(client *http.Client) *ModifyUserParams {
 	}
 }
 
-/*ModifyUserParams contains all the parameters to send to the API endpoint
+/*
+ModifyUserParams contains all the parameters to send to the API endpoint
 for the modify user operation typically these are written to a http.Request
 */
 type ModifyUserParams struct {

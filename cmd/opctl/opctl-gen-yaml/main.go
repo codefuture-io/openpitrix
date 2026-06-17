@@ -15,7 +15,7 @@ import (
 	flag "github.com/spf13/pflag"
 	yaml "gopkg.in/yaml.v2"
 
-	. "openpitrix.io/openpitrix/cmd/opctl/common"
+	. "github.com/codefuture-io/openpitrix/cmd/opctl/common"
 )
 
 type Gen struct {

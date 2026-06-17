@@ -9,10 +9,10 @@ import (
 
 	"github.com/gocraft/dbr"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/topic"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/topic"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 func getResourceIds(key string, whereCond []dbr.Builder) []string {

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // TokenReader is a Reader for the Token structure.
@@ -42,7 +42,8 @@ func NewTokenOK() *TokenOK {
 	return &TokenOK{}
 }
 
-/*TokenOK handles this case with default header values.
+/*
+TokenOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateRoleReader is a Reader for the CreateRole structure.
@@ -42,7 +42,8 @@ func NewCreateRoleOK() *CreateRoleOK {
 	return &CreateRoleOK{}
 }
 
-/*CreateRoleOK handles this case with default header values.
+/*
+CreateRoleOK handles this case with default header values.
 
 A successful response.
 */

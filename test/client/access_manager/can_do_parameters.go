@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCanDoParams creates a new CanDoParams object
@@ -59,7 +59,8 @@ func NewCanDoParamsWithHTTPClient(client *http.Client) *CanDoParams {
 	}
 }
 
-/*CanDoParams contains all the parameters to send to the API endpoint
+/*
+CanDoParams contains all the parameters to send to the API endpoint
 for the can do operation typically these are written to a http.Request
 */
 type CanDoParams struct {

@@ -9,9 +9,9 @@ import (
 
 	"go.etcd.io/etcd/api/v3/mvccpb"
 
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/etcd"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/etcd"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 const (

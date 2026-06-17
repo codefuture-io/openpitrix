@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateRuntimeCredentialParams creates a new CreateRuntimeCredentialParams object
@@ -59,7 +59,8 @@ func NewCreateRuntimeCredentialParamsWithHTTPClient(client *http.Client) *Create
 	}
 }
 
-/*CreateRuntimeCredentialParams contains all the parameters to send to the API endpoint
+/*
+CreateRuntimeCredentialParams contains all the parameters to send to the API endpoint
 for the create runtime credential operation typically these are written to a http.Request
 */
 type CreateRuntimeCredentialParams struct {

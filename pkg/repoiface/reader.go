@@ -14,13 +14,13 @@ import (
 	"helm.sh/helm/v3/pkg/provenance"
 	"helm.sh/helm/v3/pkg/repo"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/devkit"
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/repoiface/wrapper"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
-	"openpitrix.io/openpitrix/pkg/util/yamlutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/devkit"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/repoiface/wrapper"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/yamlutil"
 )
 
 type Reader struct {

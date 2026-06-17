@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewModifyClusterNodeAttributesParams creates a new ModifyClusterNodeAttributesParams object
@@ -59,7 +59,8 @@ func NewModifyClusterNodeAttributesParamsWithHTTPClient(client *http.Client) *Mo
 	}
 }
 
-/*ModifyClusterNodeAttributesParams contains all the parameters to send to the API endpoint
+/*
+ModifyClusterNodeAttributesParams contains all the parameters to send to the API endpoint
 for the modify cluster node attributes operation typically these are written to a http.Request
 */
 type ModifyClusterNodeAttributesParams struct {

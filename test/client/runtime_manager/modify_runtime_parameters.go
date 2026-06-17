@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewModifyRuntimeParams creates a new ModifyRuntimeParams object
@@ -59,7 +59,8 @@ func NewModifyRuntimeParamsWithHTTPClient(client *http.Client) *ModifyRuntimePar
 	}
 }
 
-/*ModifyRuntimeParams contains all the parameters to send to the API endpoint
+/*
+ModifyRuntimeParams contains all the parameters to send to the API endpoint
 for the modify runtime operation typically these are written to a http.Request
 */
 type ModifyRuntimeParams struct {

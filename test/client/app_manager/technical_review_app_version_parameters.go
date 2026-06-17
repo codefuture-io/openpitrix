@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewTechnicalReviewAppVersionParams creates a new TechnicalReviewAppVersionParams object
@@ -59,7 +59,8 @@ func NewTechnicalReviewAppVersionParamsWithHTTPClient(client *http.Client) *Tech
 	}
 }
 
-/*TechnicalReviewAppVersionParams contains all the parameters to send to the API endpoint
+/*
+TechnicalReviewAppVersionParams contains all the parameters to send to the API endpoint
 for the technical review app version operation typically these are written to a http.Request
 */
 type TechnicalReviewAppVersionParams struct {

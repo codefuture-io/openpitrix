@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // AdminRejectAppVersionReader is a Reader for the AdminRejectAppVersion structure.
@@ -42,7 +42,8 @@ func NewAdminRejectAppVersionOK() *AdminRejectAppVersionOK {
 	return &AdminRejectAppVersionOK{}
 }
 
-/*AdminRejectAppVersionOK handles this case with default header values.
+/*
+AdminRejectAppVersionOK handles this case with default header values.
 
 A successful response.
 */

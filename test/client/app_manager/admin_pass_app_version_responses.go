@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // AdminPassAppVersionReader is a Reader for the AdminPassAppVersion structure.
@@ -42,7 +42,8 @@ func NewAdminPassAppVersionOK() *AdminPassAppVersionOK {
 	return &AdminPassAppVersionOK{}
 }
 
-/*AdminPassAppVersionOK handles this case with default header values.
+/*
+AdminPassAppVersionOK handles this case with default header values.
 
 A successful response.
 */

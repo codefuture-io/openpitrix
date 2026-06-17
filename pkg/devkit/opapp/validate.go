@@ -10,7 +10,7 @@ import (
 
 	"github.com/xeipuuv/gojsonschema"
 
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 var schemaLoader = gojsonschema.NewStringLoader(ClusterSchema)

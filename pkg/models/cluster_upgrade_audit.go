@@ -7,8 +7,8 @@ package models
 import (
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
 )
 
 type ClusterUpgradeAudit struct {

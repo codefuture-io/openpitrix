@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type ClusterWrapper struct {
@@ -134,20 +134,22 @@ func (c *ClusterWrapper) GetCommonAttribute(role, attributeName string) interfac
 
 /*
 endpoints is in the following format:
-{
-  "client_port": {
-	  "port": 2181,
-	  "protocol": "tcp"
-  },
-  "reserved_ips": {
-	"write_vip":{
 
-	},
-	 "read_vip":{
+	{
+	  "client_port": {
+		  "port": 2181,
+		  "protocol": "tcp"
+	  },
+	  "reserved_ips": {
+		"write_vip":{
 
+		},
+		 "read_vip":{
+
+		}
+	  }
 	}
-  }
-}
+
 where client_port is a developer-defined name. Port either is an integer or a reference
 to an env variable such as env.<port> or env.<role>.<port>. It may have multiple endpoints defined.
 */

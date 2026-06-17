@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewAdminRejectAppVersionParams creates a new AdminRejectAppVersionParams object
@@ -59,7 +59,8 @@ func NewAdminRejectAppVersionParamsWithHTTPClient(client *http.Client) *AdminRej
 	}
 }
 
-/*AdminRejectAppVersionParams contains all the parameters to send to the API endpoint
+/*
+AdminRejectAppVersionParams contains all the parameters to send to the API endpoint
 for the admin reject app version operation typically these are written to a http.Request
 */
 type AdminRejectAppVersionParams struct {

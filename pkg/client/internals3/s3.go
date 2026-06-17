@@ -9,7 +9,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 
-	opconfig "openpitrix.io/openpitrix/pkg/config"
+	opconfig "github.com/codefuture-io/openpitrix/pkg/config"
 )
 
 var aConf = opconfig.GetConf().Attachment

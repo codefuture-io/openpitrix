@@ -14,7 +14,7 @@ cache:
 language: go
 go:
 - '1.13'
-go_import_path: openpitrix.io/openpitrix
+go_import_path: github.com/codefuture-io/openpitrix
 addons:
   apt:
     packages:

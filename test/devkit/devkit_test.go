@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build integration
 // +build integration
 
 package devkit
@@ -12,10 +13,10 @@ import (
 	"testing"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/util/iputil"
-	"openpitrix.io/openpitrix/test/repocommon"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/util/iputil"
+	"github.com/codefuture-io/openpitrix/test/repocommon"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 const testExportPort = 9191

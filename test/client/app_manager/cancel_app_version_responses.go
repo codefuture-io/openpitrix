@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CancelAppVersionReader is a Reader for the CancelAppVersion structure.
@@ -42,7 +42,8 @@ func NewCancelAppVersionOK() *CancelAppVersionOK {
 	return &CancelAppVersionOK{}
 }
 
-/*CancelAppVersionOK handles this case with default header values.
+/*
+CancelAppVersionOK handles this case with default header values.
 
 A successful response.
 */

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewLeaveGroupParams creates a new LeaveGroupParams object
@@ -59,7 +59,8 @@ func NewLeaveGroupParamsWithHTTPClient(client *http.Client) *LeaveGroupParams {
 	}
 }
 
-/*LeaveGroupParams contains all the parameters to send to the API endpoint
+/*
+LeaveGroupParams contains all the parameters to send to the API endpoint
 for the leave group operation typically these are written to a http.Request
 */
 type LeaveGroupParams struct {

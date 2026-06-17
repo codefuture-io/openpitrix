@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreatePasswordResetReader is a Reader for the CreatePasswordReset structure.
@@ -42,7 +42,8 @@ func NewCreatePasswordResetOK() *CreatePasswordResetOK {
 	return &CreatePasswordResetOK{}
 }
 
-/*CreatePasswordResetOK handles this case with default header values.
+/*
+CreatePasswordResetOK handles this case with default header values.
 
 A successful response.
 */

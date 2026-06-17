@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeTasksReader is a Reader for the DescribeTasks structure.
@@ -42,7 +42,8 @@ func NewDescribeTasksOK() *DescribeTasksOK {
 	return &DescribeTasksOK{}
 }
 
-/*DescribeTasksOK handles this case with default header values.
+/*
+DescribeTasksOK handles this case with default header values.
 
 A successful response.
 */

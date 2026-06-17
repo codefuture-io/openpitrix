@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // UpgradeClusterReader is a Reader for the UpgradeCluster structure.
@@ -42,7 +42,8 @@ func NewUpgradeClusterOK() *UpgradeClusterOK {
 	return &UpgradeClusterOK{}
 }
 
-/*UpgradeClusterOK handles this case with default header values.
+/*
+UpgradeClusterOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateMarketReader is a Reader for the CreateMarket structure.
@@ -42,7 +42,8 @@ func NewCreateMarketOK() *CreateMarketOK {
 	return &CreateMarketOK{}
 }
 
-/*CreateMarketOK handles this case with default header values.
+/*
+CreateMarketOK handles this case with default header values.
 
 A successful response.
 */

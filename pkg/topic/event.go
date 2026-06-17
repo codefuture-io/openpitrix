@@ -13,10 +13,10 @@ import (
 	"go.etcd.io/etcd/api/v3/mvccpb"
 	"go.etcd.io/etcd/client/v3"
 
-	"openpitrix.io/openpitrix/pkg/etcd"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/util/idutil"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/etcd"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/util/idutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 const expireTime = 60 // second

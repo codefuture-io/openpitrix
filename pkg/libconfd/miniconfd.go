@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build ignore
 // +build ignore
 
 package main
@@ -13,8 +14,8 @@ import (
 
 	"github.com/urfave/cli"
 
-	"openpitrix.io/openpitrix/pkg/libconfd"
-	_ "openpitrix.io/openpitrix/pkg/libconfd/backends"
+	"github.com/codefuture-io/openpitrix/pkg/libconfd"
+	_ "github.com/codefuture-io/openpitrix/pkg/libconfd/backends"
 )
 
 func main() {

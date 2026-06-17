@@ -5,8 +5,8 @@
 package models
 
 import (
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type Cmd struct {
@@ -33,15 +33,15 @@ type CmdCnodes struct {
 }
 
 /*
-{
-  	clusters: {
-		<cluster_id>: {
-			cmd: {
-				<instance_id>: <cmd>
+	{
+	  	clusters: {
+			<cluster_id>: {
+				cmd: {
+					<instance_id>: <cmd>
+				}
 			}
 		}
 	}
-}
 */
 func (c *CmdCnodes) Format() map[string]interface{} {
 	if c.Cmd == nil {

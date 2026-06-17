@@ -12,7 +12,7 @@ import (
 	jose "github.com/go-jose/go-jose/v3"
 	"github.com/go-jose/go-jose/v3/jwt"
 
-	"openpitrix.io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
 )
 
 var ErrExpired = fmt.Errorf("access token expired")

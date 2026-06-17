@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewDeleteClusterNodesParams creates a new DeleteClusterNodesParams object
@@ -59,7 +59,8 @@ func NewDeleteClusterNodesParamsWithHTTPClient(client *http.Client) *DeleteClust
 	}
 }
 
-/*DeleteClusterNodesParams contains all the parameters to send to the API endpoint
+/*
+DeleteClusterNodesParams contains all the parameters to send to the API endpoint
 for the delete cluster nodes operation typically these are written to a http.Request
 */
 type DeleteClusterNodesParams struct {

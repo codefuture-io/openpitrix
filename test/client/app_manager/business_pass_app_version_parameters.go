@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewBusinessPassAppVersionParams creates a new BusinessPassAppVersionParams object
@@ -59,7 +59,8 @@ func NewBusinessPassAppVersionParamsWithHTTPClient(client *http.Client) *Busines
 	}
 }
 
-/*BusinessPassAppVersionParams contains all the parameters to send to the API endpoint
+/*
+BusinessPassAppVersionParams contains all the parameters to send to the API endpoint
 for the business pass app version operation typically these are written to a http.Request
 */
 type BusinessPassAppVersionParams struct {

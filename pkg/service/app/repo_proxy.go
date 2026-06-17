@@ -10,17 +10,17 @@ import (
 	"sort"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/repoiface"
-	"openpitrix.io/openpitrix/pkg/repoiface/wrapper"
-	"openpitrix.io/openpitrix/pkg/sender"
-	"openpitrix.io/openpitrix/pkg/service/category/categoryutil"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/repoiface"
+	"github.com/codefuture-io/openpitrix/pkg/repoiface/wrapper"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/service/category/categoryutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 type repoProxy struct {

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // UserJoinMarketReader is a Reader for the UserJoinMarket structure.
@@ -42,7 +42,8 @@ func NewUserJoinMarketOK() *UserJoinMarketOK {
 	return &UserJoinMarketOK{}
 }
 
-/*UserJoinMarketOK handles this case with default header values.
+/*
+UserJoinMarketOK handles this case with default header values.
 
 A successful response.
 */

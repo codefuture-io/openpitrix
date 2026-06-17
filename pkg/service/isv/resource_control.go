@@ -8,15 +8,15 @@ import (
 	"context"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 func DescribeVendorVerifyInfos(ctx context.Context, req *pb.DescribeVendorVerifyInfosRequest) ([]*models.VendorVerifyInfo, uint32, error) {

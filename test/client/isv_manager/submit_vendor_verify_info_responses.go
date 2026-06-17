@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // SubmitVendorVerifyInfoReader is a Reader for the SubmitVendorVerifyInfo structure.
@@ -42,7 +42,8 @@ func NewSubmitVendorVerifyInfoOK() *SubmitVendorVerifyInfoOK {
 	return &SubmitVendorVerifyInfoOK{}
 }
 
-/*SubmitVendorVerifyInfoOK handles this case with default header values.
+/*
+SubmitVendorVerifyInfoOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateClientReader is a Reader for the CreateClient structure.
@@ -42,7 +42,8 @@ func NewCreateClientOK() *CreateClientOK {
 	return &CreateClientOK{}
 }
 
-/*CreateClientOK handles this case with default header values.
+/*
+CreateClientOK handles this case with default header values.
 
 A successful response.
 */

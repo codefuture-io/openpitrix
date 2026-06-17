@@ -7,7 +7,7 @@ package testutil
 import (
 	"path"
 
-	"openpitrix.io/openpitrix/pkg/util/idutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/idutil"
 )
 
 const TmpPath = "/tmp/openpitrix-test"

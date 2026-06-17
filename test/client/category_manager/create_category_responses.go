@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateCategoryReader is a Reader for the CreateCategory structure.
@@ -42,7 +42,8 @@ func NewCreateCategoryOK() *CreateCategoryOK {
 	return &CreateCategoryOK{}
 }
 
-/*CreateCategoryOK handles this case with default header values.
+/*
+CreateCategoryOK handles this case with default header values.
 
 A successful response.
 */

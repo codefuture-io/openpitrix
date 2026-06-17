@@ -6,21 +6,21 @@ import (
 	"fmt"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/sender"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 
 	"helm.sh/helm/v3/pkg/chart"
 	"helm.sh/helm/v3/pkg/chart/loader"
 	"helm.sh/helm/v3/pkg/release"
 
-	appclient "openpitrix.io/openpitrix/pkg/client/app"
-	runtimeclient "openpitrix.io/openpitrix/pkg/client/runtime"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	appclient "github.com/codefuture-io/openpitrix/pkg/client/app"
+	runtimeclient "github.com/codefuture-io/openpitrix/pkg/client/runtime"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 func getChartAndAppId(ctx context.Context, versionId string) (*chart.Chart, string, error) {

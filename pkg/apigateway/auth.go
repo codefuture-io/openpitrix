@@ -10,13 +10,13 @@ import (
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 
-	"openpitrix.io/openpitrix/pkg/client/access"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/sender"
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
-	"openpitrix.io/openpitrix/pkg/util/jwtutil"
+	"github.com/codefuture-io/openpitrix/pkg/client/access"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jwtutil"
 )
 
 const (

@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build etcd
 // +build etcd
 
 package topic
@@ -13,8 +14,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"openpitrix.io/openpitrix/pkg/config/test_config"
-	"openpitrix.io/openpitrix/pkg/etcd"
+	"github.com/codefuture-io/openpitrix/pkg/config/test_config"
+	"github.com/codefuture-io/openpitrix/pkg/etcd"
 )
 
 const (

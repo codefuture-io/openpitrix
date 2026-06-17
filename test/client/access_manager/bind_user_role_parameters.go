@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewBindUserRoleParams creates a new BindUserRoleParams object
@@ -59,7 +59,8 @@ func NewBindUserRoleParamsWithHTTPClient(client *http.Client) *BindUserRoleParam
 	}
 }
 
-/*BindUserRoleParams contains all the parameters to send to the API endpoint
+/*
+BindUserRoleParams contains all the parameters to send to the API endpoint
 for the bind user role operation typically these are written to a http.Request
 */
 type BindUserRoleParams struct {

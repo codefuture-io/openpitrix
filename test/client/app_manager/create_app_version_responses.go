@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateAppVersionReader is a Reader for the CreateAppVersion structure.
@@ -42,7 +42,8 @@ func NewCreateAppVersionOK() *CreateAppVersionOK {
 	return &CreateAppVersionOK{}
 }
 
-/*CreateAppVersionOK handles this case with default header values.
+/*
+CreateAppVersionOK handles this case with default header values.
 
 A successful response.
 */

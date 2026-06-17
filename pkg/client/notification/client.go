@@ -7,13 +7,13 @@ package notification
 import (
 	"context"
 
-	nfpb "openpitrix.io/notification/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	nfpb "github.com/codefuture-io/notification/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 type Client struct {

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // RejectVendorVerifyInfoReader is a Reader for the RejectVendorVerifyInfo structure.
@@ -42,7 +42,8 @@ func NewRejectVendorVerifyInfoOK() *RejectVendorVerifyInfoOK {
 	return &RejectVendorVerifyInfoOK{}
 }
 
-/*RejectVendorVerifyInfoOK handles this case with default header values.
+/*
+RejectVendorVerifyInfoOK handles this case with default header values.
 
 A successful response.
 */

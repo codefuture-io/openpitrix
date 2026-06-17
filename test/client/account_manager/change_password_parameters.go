@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewChangePasswordParams creates a new ChangePasswordParams object
@@ -59,7 +59,8 @@ func NewChangePasswordParamsWithHTTPClient(client *http.Client) *ChangePasswordP
 	}
 }
 
-/*ChangePasswordParams contains all the parameters to send to the API endpoint
+/*
+ChangePasswordParams contains all the parameters to send to the API endpoint
 for the change password operation typically these are written to a http.Request
 */
 type ChangePasswordParams struct {

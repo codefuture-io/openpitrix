@@ -17,7 +17,7 @@ import (
 
 	"github.com/golang/protobuf/ptypes/any"
 
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
 )
 
 func Load(name string) (*opapp.OpApp, error) {

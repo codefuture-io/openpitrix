@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build aws
 // +build aws
 
 // This file maybe discard
@@ -13,12 +14,12 @@ import (
 	"testing"
 	"time"
 
-	"openpitrix.io/openpitrix/test/client/app_manager"
-	"openpitrix.io/openpitrix/test/client/cluster_manager"
-	"openpitrix.io/openpitrix/test/client/repo_manager"
-	"openpitrix.io/openpitrix/test/client/runtime_manager"
-	"openpitrix.io/openpitrix/test/models"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/test/client/app_manager"
+	"github.com/codefuture-io/openpitrix/test/client/cluster_manager"
+	"github.com/codefuture-io/openpitrix/test/client/repo_manager"
+	"github.com/codefuture-io/openpitrix/test/client/runtime_manager"
+	"github.com/codefuture-io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 var (

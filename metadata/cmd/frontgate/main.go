@@ -17,14 +17,14 @@ import (
 	"github.com/chai2010/jsonmap"
 	"github.com/urfave/cli"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/service/metadata/frontgate"
-	"openpitrix.io/openpitrix/pkg/service/metadata/frontgate/frontgateutil"
-	"openpitrix.io/openpitrix/pkg/util/pathutil"
-	"openpitrix.io/openpitrix/pkg/util/tlsutil"
-	"openpitrix.io/openpitrix/pkg/version"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/frontgate"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/frontgate/frontgateutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/pathutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/tlsutil"
+	"github.com/codefuture-io/openpitrix/pkg/version"
 )
 
 func main() {

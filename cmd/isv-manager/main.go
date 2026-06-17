@@ -2,12 +2,12 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
-//openpitrix isv manager
+// openpitrix isv manager
 package main
 
 import (
-	"openpitrix.io/openpitrix/pkg/config"
-	isv "openpitrix.io/openpitrix/pkg/service/isv"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	isv "github.com/codefuture-io/openpitrix/pkg/service/isv"
 )
 
 func main() {

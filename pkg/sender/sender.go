@@ -9,7 +9,7 @@ import (
 
 	"encoding/json"
 
-	"openpitrix.io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
 )
 
 type Sender struct {

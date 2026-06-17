@@ -16,7 +16,7 @@ import (
 
 	"github.com/Masterminds/semver"
 
-	"openpitrix.io/openpitrix/pkg/util/yamlutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/yamlutil"
 )
 
 const APIVersionV1 = "v1"

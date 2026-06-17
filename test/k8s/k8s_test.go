@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build k8s
 // +build k8s
 
 package k8s
@@ -11,15 +12,15 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
-	apiclient "openpitrix.io/openpitrix/test/client"
-	"openpitrix.io/openpitrix/test/client/app_manager"
-	"openpitrix.io/openpitrix/test/client/cluster_manager"
-	"openpitrix.io/openpitrix/test/client/job_manager"
-	"openpitrix.io/openpitrix/test/client/runtime_manager"
-	"openpitrix.io/openpitrix/test/models"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
+	apiclient "github.com/codefuture-io/openpitrix/test/client"
+	"github.com/codefuture-io/openpitrix/test/client/app_manager"
+	"github.com/codefuture-io/openpitrix/test/client/cluster_manager"
+	"github.com/codefuture-io/openpitrix/test/client/job_manager"
+	"github.com/codefuture-io/openpitrix/test/client/runtime_manager"
+	"github.com/codefuture-io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 var (

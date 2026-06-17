@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteUsersReader is a Reader for the DeleteUsers structure.
@@ -42,7 +42,8 @@ func NewDeleteUsersOK() *DeleteUsersOK {
 	return &DeleteUsersOK{}
 }
 
-/*DeleteUsersOK handles this case with default header values.
+/*
+DeleteUsersOK handles this case with default header values.
 
 A successful response.
 */

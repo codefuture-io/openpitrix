@@ -7,9 +7,9 @@ package pi_test
 import (
 	"fmt"
 
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
 )
 
 func ExampleNewPi() {

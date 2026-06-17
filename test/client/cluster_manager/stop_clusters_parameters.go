@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewStopClustersParams creates a new StopClustersParams object
@@ -59,7 +59,8 @@ func NewStopClustersParamsWithHTTPClient(client *http.Client) *StopClustersParam
 	}
 }
 
-/*StopClustersParams contains all the parameters to send to the API endpoint
+/*
+StopClustersParams contains all the parameters to send to the API endpoint
 for the stop clusters operation typically these are written to a http.Request
 */
 type StopClustersParams struct {

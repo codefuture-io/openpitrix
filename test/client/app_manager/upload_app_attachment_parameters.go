@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewUploadAppAttachmentParams creates a new UploadAppAttachmentParams object
@@ -59,7 +59,8 @@ func NewUploadAppAttachmentParamsWithHTTPClient(client *http.Client) *UploadAppA
 	}
 }
 
-/*UploadAppAttachmentParams contains all the parameters to send to the API endpoint
+/*
+UploadAppAttachmentParams contains all the parameters to send to the API endpoint
 for the upload app attachment operation typically these are written to a http.Request
 */
 type UploadAppAttachmentParams struct {

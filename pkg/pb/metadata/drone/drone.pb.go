@@ -13,7 +13,7 @@ import (
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
 
-	types "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	types "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

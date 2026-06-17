@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateReleaseReader is a Reader for the CreateRelease structure.
@@ -42,7 +42,8 @@ func NewCreateReleaseOK() *CreateReleaseOK {
 	return &CreateReleaseOK{}
 }
 
-/*CreateReleaseOK handles this case with default header values.
+/*
+CreateReleaseOK handles this case with default header values.
 
 A successful response.
 */

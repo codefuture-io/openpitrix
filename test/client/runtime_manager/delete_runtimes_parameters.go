@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewDeleteRuntimesParams creates a new DeleteRuntimesParams object
@@ -59,7 +59,8 @@ func NewDeleteRuntimesParamsWithHTTPClient(client *http.Client) *DeleteRuntimesP
 	}
 }
 
-/*DeleteRuntimesParams contains all the parameters to send to the API endpoint
+/*
+DeleteRuntimesParams contains all the parameters to send to the API endpoint
 for the delete runtimes operation typically these are written to a http.Request
 */
 type DeleteRuntimesParams struct {

@@ -11,14 +11,14 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbfrontgate "openpitrix.io/openpitrix/pkg/pb/metadata/frontgate"
-	pbpilot "openpitrix.io/openpitrix/pkg/pb/metadata/pilot"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/service/metadata/pilot/pilotutil"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
-	"openpitrix.io/openpitrix/pkg/version"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbfrontgate "github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate"
+	pbpilot "github.com/codefuture-io/openpitrix/pkg/pb/metadata/pilot"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/pilot/pilotutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
+	"github.com/codefuture-io/openpitrix/pkg/version"
 )
 
 var (

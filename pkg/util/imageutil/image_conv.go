@@ -12,7 +12,7 @@ import (
 
 	"github.com/disintegration/imaging"
 
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 var ErrDecodeImage = fmt.Errorf("failed to decode image")

@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build k8s
 // +build k8s
 
 package runtime
@@ -11,11 +12,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/util/idutil"
-	"openpitrix.io/openpitrix/test/client/runtime_manager"
-	"openpitrix.io/openpitrix/test/models"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/util/idutil"
+	"github.com/codefuture-io/openpitrix/test/client/runtime_manager"
+	"github.com/codefuture-io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 var clientConfig = testutil.GetClientConfig()

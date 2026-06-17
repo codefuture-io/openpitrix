@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewDeleteKeyPairsParams creates a new DeleteKeyPairsParams object
@@ -59,7 +59,8 @@ func NewDeleteKeyPairsParamsWithHTTPClient(client *http.Client) *DeleteKeyPairsP
 	}
 }
 
-/*DeleteKeyPairsParams contains all the parameters to send to the API endpoint
+/*
+DeleteKeyPairsParams contains all the parameters to send to the API endpoint
 for the delete key pairs operation typically these are written to a http.Request
 */
 type DeleteKeyPairsParams struct {

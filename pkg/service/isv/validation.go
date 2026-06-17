@@ -10,8 +10,8 @@ import (
 
 	"github.com/asaskevich/govalidator"
 
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 func VerifyUrl(ctx context.Context, url string) error {

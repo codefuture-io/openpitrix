@@ -7,9 +7,9 @@ package app
 import (
 	"context"
 
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/repoiface"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/repoiface"
 )
 
 func (p *Server) Checker(ctx context.Context, req interface{}) error {

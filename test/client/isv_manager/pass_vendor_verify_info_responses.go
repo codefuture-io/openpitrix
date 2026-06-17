@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // PassVendorVerifyInfoReader is a Reader for the PassVendorVerifyInfo structure.
@@ -42,7 +42,8 @@ func NewPassVendorVerifyInfoOK() *PassVendorVerifyInfoOK {
 	return &PassVendorVerifyInfoOK{}
 }
 
-/*PassVendorVerifyInfoOK handles this case with default header values.
+/*
+PassVendorVerifyInfoOK handles this case with default header values.
 
 A successful response.
 */

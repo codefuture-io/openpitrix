@@ -7,14 +7,14 @@ package repo
 import (
 	"context"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/service/category/categoryutil"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/service/category/categoryutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 func (p *Server) validateRepoName(ctx context.Context, name string) error {

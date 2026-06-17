@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewRecoverClustersParams creates a new RecoverClustersParams object
@@ -59,7 +59,8 @@ func NewRecoverClustersParamsWithHTTPClient(client *http.Client) *RecoverCluster
 	}
 }
 
-/*RecoverClustersParams contains all the parameters to send to the API endpoint
+/*
+RecoverClustersParams contains all the parameters to send to the API endpoint
 for the recover clusters operation typically these are written to a http.Request
 */
 type RecoverClustersParams struct {

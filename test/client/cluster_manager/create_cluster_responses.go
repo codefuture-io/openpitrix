@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateClusterReader is a Reader for the CreateCluster structure.
@@ -42,7 +42,8 @@ func NewCreateClusterOK() *CreateClusterOK {
 	return &CreateClusterOK{}
 }
 
-/*CreateClusterOK handles this case with default header values.
+/*
+CreateClusterOK handles this case with default header values.
 
 A successful response.
 */

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 const (

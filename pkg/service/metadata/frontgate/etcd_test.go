@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 type TImage struct {

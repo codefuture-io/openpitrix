@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ValidatePackageReader is a Reader for the ValidatePackage structure.
@@ -42,7 +42,8 @@ func NewValidatePackageOK() *ValidatePackageOK {
 	return &ValidatePackageOK{}
 }
 
-/*ValidatePackageOK handles this case with default header values.
+/*
+ValidatePackageOK handles this case with default header values.
 
 A successful response.
 */

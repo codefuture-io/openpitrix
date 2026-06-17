@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateKeyPairParams creates a new CreateKeyPairParams object
@@ -59,7 +59,8 @@ func NewCreateKeyPairParamsWithHTTPClient(client *http.Client) *CreateKeyPairPar
 	}
 }
 
-/*CreateKeyPairParams contains all the parameters to send to the API endpoint
+/*
+CreateKeyPairParams contains all the parameters to send to the API endpoint
 for the create key pair operation typically these are written to a http.Request
 */
 type CreateKeyPairParams struct {

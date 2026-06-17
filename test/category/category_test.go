@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build integration
 // +build integration
 
 package category
@@ -13,9 +14,9 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/stretchr/testify/require"
 
-	"openpitrix.io/openpitrix/test/client/category_manager"
-	"openpitrix.io/openpitrix/test/models"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/test/client/category_manager"
+	"github.com/codefuture-io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 var clientConfig = testutil.GetClientConfig()

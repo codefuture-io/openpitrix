@@ -8,12 +8,12 @@ import (
 	"context"
 	"fmt"
 
-	clusterclient "openpitrix.io/openpitrix/pkg/client/cluster"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	clusterclient "github.com/codefuture-io/openpitrix/pkg/client/cluster"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type FrameHandler struct {

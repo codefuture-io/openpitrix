@@ -12,11 +12,11 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/manager"
-	pbpilot "openpitrix.io/openpitrix/pkg/pb/metadata/pilot"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/service/metadata/pilot/pilotutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	pbpilot "github.com/codefuture-io/openpitrix/pkg/pb/metadata/pilot"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/pilot/pilotutil"
 )
 
 type Server struct {

@@ -12,7 +12,7 @@ import (
 
 	"helm.sh/helm/v3/pkg/provenance"
 
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
 )
 
 func IndexDirectory(dir, baseURL string) (*opapp.IndexFile, error) {

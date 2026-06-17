@@ -5,8 +5,8 @@
 package models
 
 import (
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type Meta struct {

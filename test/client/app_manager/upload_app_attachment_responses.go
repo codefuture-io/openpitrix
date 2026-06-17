@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // UploadAppAttachmentReader is a Reader for the UploadAppAttachment structure.
@@ -42,7 +42,8 @@ func NewUploadAppAttachmentOK() *UploadAppAttachmentOK {
 	return &UploadAppAttachmentOK{}
 }
 
-/*UploadAppAttachmentOK handles this case with default header values.
+/*
+UploadAppAttachmentOK handles this case with default header values.
 
 A successful response.
 */

@@ -6,7 +6,7 @@ syntax = "proto3";
 
 package metadata.types;
 
-option go_package = "openpitrix.io/openpitrix/pkg/pb/metadata/types;pbtypes";
+option go_package = "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types;pbtypes";
 
 message PilotConfig {
 	string id = 1;

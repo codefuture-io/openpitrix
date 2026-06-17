@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	vendor "openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	vendor "github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 func TestNewServer(t *testing.T) {

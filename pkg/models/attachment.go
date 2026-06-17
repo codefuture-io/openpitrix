@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/util/idutil"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/util/idutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 const AttachmentIdPrefix = "att-"

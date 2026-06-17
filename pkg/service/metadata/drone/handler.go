@@ -17,16 +17,16 @@ import (
 	"strings"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/libconfd"
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbdrone "openpitrix.io/openpitrix/pkg/pb/metadata/drone"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/service/metadata/drone/yunify_confdfunc"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
-	"openpitrix.io/openpitrix/pkg/util/httputil"
-	"openpitrix.io/openpitrix/pkg/util/retryutil"
-	"openpitrix.io/openpitrix/pkg/version"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/libconfd"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbdrone "github.com/codefuture-io/openpitrix/pkg/pb/metadata/drone"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/drone/yunify_confdfunc"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/httputil"
+	"github.com/codefuture-io/openpitrix/pkg/util/retryutil"
+	"github.com/codefuture-io/openpitrix/pkg/version"
 )
 
 var (

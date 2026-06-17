@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewTechnicalRejectAppVersionParams creates a new TechnicalRejectAppVersionParams object
@@ -59,7 +59,8 @@ func NewTechnicalRejectAppVersionParamsWithHTTPClient(client *http.Client) *Tech
 	}
 }
 
-/*TechnicalRejectAppVersionParams contains all the parameters to send to the API endpoint
+/*
+TechnicalRejectAppVersionParams contains all the parameters to send to the API endpoint
 for the technical reject app version operation typically these are written to a http.Request
 */
 type TechnicalRejectAppVersionParams struct {

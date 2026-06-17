@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // IsvCreateUserReader is a Reader for the IsvCreateUser structure.
@@ -42,7 +42,8 @@ func NewIsvCreateUserOK() *IsvCreateUserOK {
 	return &IsvCreateUserOK{}
 }
 
-/*IsvCreateUserOK handles this case with default header values.
+/*
+IsvCreateUserOK handles this case with default header values.
 
 A successful response.
 */

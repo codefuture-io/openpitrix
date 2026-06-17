@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyGroupReader is a Reader for the ModifyGroup structure.
@@ -42,7 +42,8 @@ func NewModifyGroupOK() *ModifyGroupOK {
 	return &ModifyGroupOK{}
 }
 
-/*ModifyGroupOK handles this case with default header values.
+/*
+ModifyGroupOK handles this case with default header values.
 
 A successful response.
 */

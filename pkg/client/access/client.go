@@ -7,11 +7,11 @@ package access
 import (
 	"context"
 
-	accountclient "openpitrix.io/openpitrix/pkg/client/account"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/pb"
+	accountclient "github.com/codefuture-io/openpitrix/pkg/client/account"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
 )
 
 type Client struct {

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // SetServiceConfigReader is a Reader for the SetServiceConfig structure.
@@ -42,7 +42,8 @@ func NewSetServiceConfigOK() *SetServiceConfigOK {
 	return &SetServiceConfigOK{}
 }
 
-/*SetServiceConfigOK handles this case with default header values.
+/*
+SetServiceConfigOK handles this case with default header values.
 
 A successful response.
 */

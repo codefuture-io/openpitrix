@@ -7,7 +7,7 @@ package repocommon
 import (
 	"net/url"
 
-	"openpitrix.io/openpitrix/pkg/util/idutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/idutil"
 )
 
 func GenerateLabels() string {

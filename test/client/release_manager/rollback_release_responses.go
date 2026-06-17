@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // RollbackReleaseReader is a Reader for the RollbackRelease structure.
@@ -42,7 +42,8 @@ func NewRollbackReleaseOK() *RollbackReleaseOK {
 	return &RollbackReleaseOK{}
 }
 
-/*RollbackReleaseOK handles this case with default header values.
+/*
+RollbackReleaseOK handles this case with default header values.
 
 A successful response.
 */

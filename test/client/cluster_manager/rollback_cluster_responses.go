@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // RollbackClusterReader is a Reader for the RollbackCluster structure.
@@ -42,7 +42,8 @@ func NewRollbackClusterOK() *RollbackClusterOK {
 	return &RollbackClusterOK{}
 }
 
-/*RollbackClusterOK handles this case with default header values.
+/*
+RollbackClusterOK handles this case with default header values.
 
 A successful response.
 */

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewGetServiceConfigParams creates a new GetServiceConfigParams object
@@ -59,7 +59,8 @@ func NewGetServiceConfigParamsWithHTTPClient(client *http.Client) *GetServiceCon
 	}
 }
 
-/*GetServiceConfigParams contains all the parameters to send to the API endpoint
+/*
+GetServiceConfigParams contains all the parameters to send to the API endpoint
 for the get service config operation typically these are written to a http.Request
 */
 type GetServiceConfigParams struct {

@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 func Retry(attempts int, sleep time.Duration, callback func() error) (err error) {

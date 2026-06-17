@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 func TestConfigJson_GetDefault(t *testing.T) {

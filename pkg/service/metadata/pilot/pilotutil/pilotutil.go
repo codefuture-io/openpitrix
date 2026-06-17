@@ -15,10 +15,10 @@ import (
 	grpc "google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbpilot "openpitrix.io/openpitrix/pkg/pb/metadata/pilot"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/util/tlsutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbpilot "github.com/codefuture-io/openpitrix/pkg/pb/metadata/pilot"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/util/tlsutil"
 )
 
 func MustLoadPilotConfig(path string) *pbtypes.PilotConfig {

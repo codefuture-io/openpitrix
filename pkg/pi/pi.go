@@ -11,10 +11,10 @@ import (
 
 	"github.com/google/gops/agent"
 
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/db"
-	"openpitrix.io/openpitrix/pkg/etcd"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/db"
+	"github.com/codefuture-io/openpitrix/pkg/etcd"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 type globalCfgWatcher func(*config.GlobalConfig)

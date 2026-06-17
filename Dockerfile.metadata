@@ -7,12 +7,12 @@ FROM openpitrix/openpitrix-builder as builder
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk add --no-cache util-linux
 
-WORKDIR /go/src/openpitrix.io/openpitrix/
+WORKDIR /go/src/github.com/codefuture-io/openpitrix/
 COPY . .
 
 RUN mkdir -p /metadata_bin
-RUN go generate openpitrix.io/openpitrix/pkg/version && \
-	CGO_ENABLED=0 GOOS=linux GOBIN=/metadata_bin go install -v -ldflags '-w -s' -tags netgo openpitrix.io/openpitrix/metadata/cmd/...
+RUN go generate github.com/codefuture-io/openpitrix/pkg/version && \
+	CGO_ENABLED=0 GOOS=linux GOBIN=/metadata_bin go install -v -ldflags '-w -s' -tags netgo github.com/codefuture-io/openpitrix/metadata/cmd/...
 
 # RUN find /metadata_bin -type f -exec upx {} \;
 

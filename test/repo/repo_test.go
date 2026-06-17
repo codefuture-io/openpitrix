@@ -2,6 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
+//go:build integration
 // +build integration
 
 package repo
@@ -11,13 +12,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/topic"
-	"openpitrix.io/openpitrix/test/categorycommon"
-	"openpitrix.io/openpitrix/test/client/repo_manager"
-	"openpitrix.io/openpitrix/test/models"
-	"openpitrix.io/openpitrix/test/repocommon"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/topic"
+	"github.com/codefuture-io/openpitrix/test/categorycommon"
+	"github.com/codefuture-io/openpitrix/test/client/repo_manager"
+	"github.com/codefuture-io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/repocommon"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 //var clientConfig = &ClientConfig{}

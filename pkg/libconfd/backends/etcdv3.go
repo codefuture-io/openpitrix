@@ -15,8 +15,8 @@ import (
 
 	"go.etcd.io/etcd/client/v3"
 
-	"openpitrix.io/openpitrix/pkg/libconfd"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/libconfd"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 var (

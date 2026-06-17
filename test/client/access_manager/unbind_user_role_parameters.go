@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewUnbindUserRoleParams creates a new UnbindUserRoleParams object
@@ -59,7 +59,8 @@ func NewUnbindUserRoleParamsWithHTTPClient(client *http.Client) *UnbindUserRoleP
 	}
 }
 
-/*UnbindUserRoleParams contains all the parameters to send to the API endpoint
+/*
+UnbindUserRoleParams contains all the parameters to send to the API endpoint
 for the unbind user role operation typically these are written to a http.Request
 */
 type UnbindUserRoleParams struct {

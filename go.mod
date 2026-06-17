@@ -1,11 +1,10 @@
-module openpitrix.io/openpitrix
+module github.com/codefuture-io/openpitrix
 
 go 1.26.3
 
 godebug default=go1.26.3
 
 require (
-	codefuture.io/im v0.0.0-00010101000000-000000000000
 	github.com/BurntSushi/toml v1.6.0
 	github.com/Masterminds/semver v1.5.0
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2
@@ -15,7 +14,10 @@ require (
 	github.com/aws/smithy-go v1.27.2
 	github.com/bitly/go-simplejson v0.5.1
 	github.com/chai2010/jsonmap v1.0.0
-	github.com/disintegration/imaging v1.6.1
+	github.com/codefuture-io/iam v1.0.0
+	github.com/codefuture-io/im v1.0.0
+	github.com/codefuture-io/notification v1.0.0
+	github.com/disintegration/imaging v1.6.2
 	github.com/fatih/camelcase v1.0.0
 	github.com/fatih/structs v1.1.0
 	github.com/ghodss/yaml v1.0.0
@@ -25,9 +27,9 @@ require (
 	github.com/go-openapi/runtime v0.32.3
 	github.com/go-openapi/spec v0.22.6
 	github.com/go-openapi/strfmt v0.26.3
-	github.com/go-openapi/swag v0.25.4
+	github.com/go-openapi/swag v0.26.1
 	github.com/go-openapi/validate v0.26.0
-	github.com/go-sql-driver/mysql v1.8.1
+	github.com/go-sql-driver/mysql v1.10.0
 	github.com/gocraft/dbr v0.0.0-20190714181702-8114670a83bd
 	github.com/golang/protobuf v1.5.4
 	github.com/google/gops v0.3.29
@@ -59,8 +61,6 @@ require (
 	k8s.io/apiextensions-apiserver v0.36.2
 	k8s.io/apimachinery v0.36.2
 	k8s.io/client-go v0.36.2
-	openpitrix.io/iam v0.1.0
-	openpitrix.io/notification v0.2.2
 )
 
 require google.golang.org/genproto v0.0.0-20260615183401-62b3387ff324 // indirect
@@ -103,7 +103,7 @@ require (
 	github.com/fatih/color v1.19.0 // indirect
 	github.com/fxamacker/cbor/v2 v2.9.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
-	github.com/gin-contrib/sse v0.1.0 // indirect
+	github.com/gin-contrib/sse v1.1.1 // indirect
 	github.com/go-errors/errors v1.4.2 // indirect
 	github.com/go-gorp/gorp/v3 v3.1.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
@@ -119,8 +119,8 @@ require (
 	github.com/go-openapi/swag/jsonname v0.26.1 // indirect
 	github.com/go-openapi/swag/jsonutils v0.26.1 // indirect
 	github.com/go-openapi/swag/loading v0.26.1 // indirect
-	github.com/go-openapi/swag/mangling v0.26.0 // indirect
-	github.com/go-openapi/swag/netutils v0.25.4 // indirect
+	github.com/go-openapi/swag/mangling v0.26.1 // indirect
+	github.com/go-openapi/swag/netutils v0.26.1 // indirect
 	github.com/go-openapi/swag/stringutils v0.26.1 // indirect
 	github.com/go-openapi/swag/typeutils v0.26.1 // indirect
 	github.com/go-openapi/swag/yamlutils v0.26.1 // indirect
@@ -135,7 +135,7 @@ require (
 	github.com/google/gnostic-models v0.7.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/gosuri/uitable v0.0.4 // indirect
-	github.com/grpc-ecosystem/grpc-gateway/v2 v2.28.0 // indirect
+	github.com/grpc-ecosystem/grpc-gateway/v2 v2.29.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/huandu/xstrings v1.5.0 // indirect
@@ -174,7 +174,7 @@ require (
 	github.com/sirupsen/logrus v1.9.4 // indirect
 	github.com/spf13/cast v1.7.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
-	github.com/ugorji/go/codec v1.2.11 // indirect
+	github.com/ugorji/go/codec v1.3.1 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect
 	github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415 // indirect
@@ -195,7 +195,7 @@ require (
 	golang.org/x/term v0.44.0 // indirect
 	golang.org/x/text v0.38.0 // indirect
 	golang.org/x/time v0.14.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260610212136-7ab31c22f7ad // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260615183401-62b3387ff324 // indirect
 	google.golang.org/protobuf v1.36.12-0.20260120151049-f2248ac996af // indirect
 	gopkg.in/evanphx/json-patch.v4 v4.13.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
@@ -228,9 +228,3 @@ replace (
 	k8s.io/utils => k8s.io/utils v0.0.0-20260507154919-ff6756f316d2
 	sigs.k8s.io/yaml => sigs.k8s.io/yaml v1.6.0
 )
-
-replace codefuture.io/im => github.com/codefuture-io/im v0.2.0
-
-replace openpitrix.io/iam => github.com/codefuture-io/iam v0.1.0
-
-replace openpitrix.io/notification => github.com/codefuture-io/notification v0.2.2

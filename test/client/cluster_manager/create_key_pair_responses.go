@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateKeyPairReader is a Reader for the CreateKeyPair structure.
@@ -42,7 +42,8 @@ func NewCreateKeyPairOK() *CreateKeyPairOK {
 	return &CreateKeyPairOK{}
 }
 
-/*CreateKeyPairOK handles this case with default header values.
+/*
+CreateKeyPairOK handles this case with default header values.
 
 A successful response.
 */

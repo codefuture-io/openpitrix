@@ -3,9 +3,9 @@ package helm
 import (
 	"context"
 
-	runtimeclient "openpitrix.io/openpitrix/pkg/client/runtime"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	runtimeclient "github.com/codefuture-io/openpitrix/pkg/client/runtime"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type JobDirective struct {

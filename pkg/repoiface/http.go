@@ -10,8 +10,8 @@ import (
 	"io/ioutil"
 	neturl "net/url"
 
-	"openpitrix.io/openpitrix/pkg/util/httputil"
-	"openpitrix.io/openpitrix/pkg/util/yamlutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/httputil"
+	"github.com/codefuture-io/openpitrix/pkg/util/yamlutil"
 )
 
 type HttpInterface struct {

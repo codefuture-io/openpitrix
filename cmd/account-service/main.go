@@ -5,8 +5,8 @@
 package main
 
 import (
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/service/account"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/service/account"
 )
 
 func main() {

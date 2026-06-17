@@ -12,7 +12,7 @@ import (
 
 	"github.com/koding/multiconfig"
 
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 type Config struct {

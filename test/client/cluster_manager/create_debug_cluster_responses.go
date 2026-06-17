@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateDebugClusterReader is a Reader for the CreateDebugCluster structure.
@@ -42,7 +42,8 @@ func NewCreateDebugClusterOK() *CreateDebugClusterOK {
 	return &CreateDebugClusterOK{}
 }
 
-/*CreateDebugClusterOK handles this case with default header values.
+/*
+CreateDebugClusterOK handles this case with default header values.
 
 A successful response.
 */

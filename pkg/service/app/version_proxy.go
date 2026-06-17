@@ -8,16 +8,16 @@ import (
 	"bytes"
 	"context"
 
-	clientutil "openpitrix.io/openpitrix/pkg/client"
-	attachmentclient "openpitrix.io/openpitrix/pkg/client/attachment"
-	repoclient "openpitrix.io/openpitrix/pkg/client/repo"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/repoiface"
-	"openpitrix.io/openpitrix/pkg/util/gziputil"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	clientutil "github.com/codefuture-io/openpitrix/pkg/client"
+	attachmentclient "github.com/codefuture-io/openpitrix/pkg/client/attachment"
+	repoclient "github.com/codefuture-io/openpitrix/pkg/client/repo"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/repoiface"
+	"github.com/codefuture-io/openpitrix/pkg/util/gziputil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 type versionProxy struct {

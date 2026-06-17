@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyClusterNodeAttributesReader is a Reader for the ModifyClusterNodeAttributes structure.
@@ -42,7 +42,8 @@ func NewModifyClusterNodeAttributesOK() *ModifyClusterNodeAttributesOK {
 	return &ModifyClusterNodeAttributesOK{}
 }
 
-/*ModifyClusterNodeAttributesOK handles this case with default header values.
+/*
+ModifyClusterNodeAttributesOK handles this case with default header values.
 
 A successful response.
 */

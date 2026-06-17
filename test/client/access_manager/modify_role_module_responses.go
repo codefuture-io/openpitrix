@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyRoleModuleReader is a Reader for the ModifyRoleModule structure.
@@ -42,7 +42,8 @@ func NewModifyRoleModuleOK() *ModifyRoleModuleOK {
 	return &ModifyRoleModuleOK{}
 }
 
-/*ModifyRoleModuleOK handles this case with default header values.
+/*
+ModifyRoleModuleOK handles this case with default header values.
 
 A successful response.
 */

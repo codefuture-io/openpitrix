@@ -5,9 +5,9 @@
 package am
 
 import (
-	pbam "openpitrix.io/iam/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/manager"
+	pbam "github.com/codefuture-io/iam/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
 )
 
 type Client struct {

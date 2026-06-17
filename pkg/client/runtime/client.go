@@ -5,9 +5,9 @@
 package runtime
 
 import (
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
 )
 
 func NewRuntimeManagerClient() (pb.RuntimeManagerClient, error) {

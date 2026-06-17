@@ -11,8 +11,8 @@ import (
 
 	"github.com/gocraft/dbr"
 
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 type key int

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // GetRoleModuleReader is a Reader for the GetRoleModule structure.
@@ -42,7 +42,8 @@ func NewGetRoleModuleOK() *GetRoleModuleOK {
 	return &GetRoleModuleOK{}
 }
 
-/*GetRoleModuleOK handles this case with default header values.
+/*
+GetRoleModuleOK handles this case with default header values.
 
 A successful response.
 */

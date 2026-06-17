@@ -7,12 +7,12 @@ package repo
 import (
 	"context"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/plugins"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/plugins"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 var SupportedVisibility = []string{

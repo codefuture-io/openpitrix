@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeKeyPairsReader is a Reader for the DescribeKeyPairs structure.
@@ -42,7 +42,8 @@ func NewDescribeKeyPairsOK() *DescribeKeyPairsOK {
 	return &DescribeKeyPairsOK{}
 }
 
-/*DescribeKeyPairsOK handles this case with default header values.
+/*
+DescribeKeyPairsOK handles this case with default header values.
 
 A successful response.
 */

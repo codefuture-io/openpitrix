@@ -9,10 +9,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/libconfd/backends"
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/libconfd/backends"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 type Options func(opt *pbtypes.FrontgateConfig)

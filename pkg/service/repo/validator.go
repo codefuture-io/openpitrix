@@ -3,8 +3,8 @@ package repo
 import (
 	"context"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/repoiface"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/repoiface"
 )
 
 func validate(ctx context.Context, repoType, url, credential string) error {

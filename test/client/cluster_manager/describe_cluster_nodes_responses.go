@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeClusterNodesReader is a Reader for the DescribeClusterNodes structure.
@@ -42,7 +42,8 @@ func NewDescribeClusterNodesOK() *DescribeClusterNodesOK {
 	return &DescribeClusterNodesOK{}
 }
 
-/*DescribeClusterNodesOK handles this case with default header values.
+/*
+DescribeClusterNodesOK handles this case with default header values.
 
 A successful response.
 */

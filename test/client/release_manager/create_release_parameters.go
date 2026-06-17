@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateReleaseParams creates a new CreateReleaseParams object
@@ -59,7 +59,8 @@ func NewCreateReleaseParamsWithHTTPClient(client *http.Client) *CreateReleasePar
 	}
 }
 
-/*CreateReleaseParams contains all the parameters to send to the API endpoint
+/*
+CreateReleaseParams contains all the parameters to send to the API endpoint
 for the create release operation typically these are written to a http.Request
 */
 type CreateReleaseParams struct {

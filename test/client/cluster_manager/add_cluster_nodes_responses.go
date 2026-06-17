@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // AddClusterNodesReader is a Reader for the AddClusterNodes structure.
@@ -42,7 +42,8 @@ func NewAddClusterNodesOK() *AddClusterNodesOK {
 	return &AddClusterNodesOK{}
 }
 
-/*AddClusterNodesOK handles this case with default header values.
+/*
+AddClusterNodesOK handles this case with default header values.
 
 A successful response.
 */

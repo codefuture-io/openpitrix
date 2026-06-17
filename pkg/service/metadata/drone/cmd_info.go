@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 // Linux: /opt/openpitrix/drone/log/cmd.info

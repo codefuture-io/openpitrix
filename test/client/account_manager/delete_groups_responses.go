@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteGroupsReader is a Reader for the DeleteGroups structure.
@@ -42,7 +42,8 @@ func NewDeleteGroupsOK() *DeleteGroupsOK {
 	return &DeleteGroupsOK{}
 }
 
-/*DeleteGroupsOK handles this case with default header values.
+/*
+DeleteGroupsOK handles this case with default header values.
 
 A successful response.
 */

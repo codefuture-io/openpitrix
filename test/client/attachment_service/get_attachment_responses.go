@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // GetAttachmentReader is a Reader for the GetAttachment structure.
@@ -42,7 +42,8 @@ func NewGetAttachmentOK() *GetAttachmentOK {
 	return &GetAttachmentOK{}
 }
 
-/*GetAttachmentOK handles this case with default header values.
+/*
+GetAttachmentOK handles this case with default header values.
 
 A successful response.
 */

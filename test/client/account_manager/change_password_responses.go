@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ChangePasswordReader is a Reader for the ChangePassword structure.
@@ -42,7 +42,8 @@ func NewChangePasswordOK() *ChangePasswordOK {
 	return &ChangePasswordOK{}
 }
 
-/*ChangePasswordOK handles this case with default header values.
+/*
+ChangePasswordOK handles this case with default header values.
 
 A successful response.
 */

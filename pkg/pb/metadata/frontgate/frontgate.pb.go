@@ -18,7 +18,7 @@ import (
 
 	proto "github.com/golang/protobuf/proto"
 
-	types "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	types "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -123,7 +123,9 @@ func init() {
 	proto.RegisterType((*Config)(nil), "metadata.frontgate.Config")
 }
 
-func init() { proto.RegisterFile("metadata/frontgate/frontgate.proto", fileDescriptor_877ed7c290242df0) }
+func init() {
+	proto.RegisterFile("metadata/frontgate/frontgate.proto", fileDescriptor_877ed7c290242df0)
+}
 
 var fileDescriptor_877ed7c290242df0 = []byte{
 	// 807 bytes of a gzipped FileDescriptorProto

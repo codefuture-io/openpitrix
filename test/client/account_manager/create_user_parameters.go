@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateUserParams creates a new CreateUserParams object
@@ -59,7 +59,8 @@ func NewCreateUserParamsWithHTTPClient(client *http.Client) *CreateUserParams {
 	}
 }
 
-/*CreateUserParams contains all the parameters to send to the API endpoint
+/*
+CreateUserParams contains all the parameters to send to the API endpoint
 for the create user operation typically these are written to a http.Request
 */
 type CreateUserParams struct {

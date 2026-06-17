@@ -9,8 +9,8 @@ import (
 	"fmt"
 	neturl "net/url"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 type Err error

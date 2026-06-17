@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateRuntimeReader is a Reader for the CreateRuntime structure.
@@ -42,7 +42,8 @@ func NewCreateRuntimeOK() *CreateRuntimeOK {
 	return &CreateRuntimeOK{}
 }
 
-/*CreateRuntimeOK handles this case with default header values.
+/*
+CreateRuntimeOK handles this case with default header values.
 
 A successful response.
 */

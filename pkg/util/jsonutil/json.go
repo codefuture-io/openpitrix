@@ -9,7 +9,7 @@ import (
 
 	"github.com/bitly/go-simplejson"
 
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 func Encode(o interface{}) ([]byte, error) {

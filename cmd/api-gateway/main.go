@@ -5,8 +5,8 @@
 package main
 
 import (
-	"openpitrix.io/openpitrix/pkg/apigateway"
-	"openpitrix.io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/apigateway"
+	"github.com/codefuture-io/openpitrix/pkg/config"
 )
 
 func main() {

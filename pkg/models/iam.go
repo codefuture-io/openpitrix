@@ -5,11 +5,11 @@
 package models
 
 import (
-	pbim "codefuture.io/im/pkg/pb"
+	pbim "github.com/codefuture-io/im/pkg/pb"
 
-	pbam "openpitrix.io/iam/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	pbam "github.com/codefuture-io/iam/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 func ToPbRole(role *pbam.Role) *pb.Role {

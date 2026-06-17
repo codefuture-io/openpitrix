@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteRuntimesReader is a Reader for the DeleteRuntimes structure.
@@ -42,7 +42,8 @@ func NewDeleteRuntimesOK() *DeleteRuntimesOK {
 	return &DeleteRuntimesOK{}
 }
 
-/*DeleteRuntimesOK handles this case with default header values.
+/*
+DeleteRuntimesOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // GetAppVersionPackageFilesReader is a Reader for the GetAppVersionPackageFiles structure.
@@ -42,7 +42,8 @@ func NewGetAppVersionPackageFilesOK() *GetAppVersionPackageFilesOK {
 	return &GetAppVersionPackageFilesOK{}
 }
 
-/*GetAppVersionPackageFilesOK handles this case with default header values.
+/*
+GetAppVersionPackageFilesOK handles this case with default header values.
 
 A successful response.
 */

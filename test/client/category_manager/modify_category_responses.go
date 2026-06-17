@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyCategoryReader is a Reader for the ModifyCategory structure.
@@ -42,7 +42,8 @@ func NewModifyCategoryOK() *ModifyCategoryOK {
 	return &ModifyCategoryOK{}
 }
 
-/*ModifyCategoryOK handles this case with default header values.
+/*
+ModifyCategoryOK handles this case with default header values.
 
 A successful response.
 */

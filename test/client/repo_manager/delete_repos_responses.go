@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteReposReader is a Reader for the DeleteRepos structure.
@@ -42,7 +42,8 @@ func NewDeleteReposOK() *DeleteReposOK {
 	return &DeleteReposOK{}
 }
 
-/*DeleteReposOK handles this case with default header values.
+/*
+DeleteReposOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeSubnetsReader is a Reader for the DescribeSubnets structure.
@@ -42,7 +42,8 @@ func NewDescribeSubnetsOK() *DescribeSubnetsOK {
 	return &DescribeSubnetsOK{}
 }
 
-/*DescribeSubnetsOK handles this case with default header values.
+/*
+DescribeSubnetsOK handles this case with default header values.
 
 A successful response.
 */

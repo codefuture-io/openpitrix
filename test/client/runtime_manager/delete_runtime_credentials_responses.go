@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteRuntimeCredentialsReader is a Reader for the DeleteRuntimeCredentials structure.
@@ -42,7 +42,8 @@ func NewDeleteRuntimeCredentialsOK() *DeleteRuntimeCredentialsOK {
 	return &DeleteRuntimeCredentialsOK{}
 }
 
-/*DeleteRuntimeCredentialsOK handles this case with default header values.
+/*
+DeleteRuntimeCredentialsOK handles this case with default header values.
 
 A successful response.
 */

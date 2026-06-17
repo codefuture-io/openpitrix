@@ -5,10 +5,10 @@
 package im
 
 import (
-	pbim "codefuture.io/im/pkg/pb"
+	pbim "github.com/codefuture-io/im/pkg/pb"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
 )
 
 func NewClient() (pbim.IdentityManagerClient, error) {

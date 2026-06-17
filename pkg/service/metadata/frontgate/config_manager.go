@@ -16,8 +16,8 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 type ConfigManager struct {

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteMarketsReader is a Reader for the DeleteMarkets structure.
@@ -42,7 +42,8 @@ func NewDeleteMarketsOK() *DeleteMarketsOK {
 	return &DeleteMarketsOK{}
 }
 
-/*DeleteMarketsOK handles this case with default header values.
+/*
+DeleteMarketsOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // UpgradeReleaseReader is a Reader for the UpgradeRelease structure.
@@ -42,7 +42,8 @@ func NewUpgradeReleaseOK() *UpgradeReleaseOK {
 	return &UpgradeReleaseOK{}
 }
 
-/*UpgradeReleaseOK handles this case with default header values.
+/*
+UpgradeReleaseOK handles this case with default header values.
 
 A successful response.
 */

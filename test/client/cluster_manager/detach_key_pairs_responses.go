@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DetachKeyPairsReader is a Reader for the DetachKeyPairs structure.
@@ -42,7 +42,8 @@ func NewDetachKeyPairsOK() *DetachKeyPairsOK {
 	return &DetachKeyPairsOK{}
 }
 
-/*DetachKeyPairsOK handles this case with default header values.
+/*
+DetachKeyPairsOK handles this case with default header values.
 
 A successful response.
 */

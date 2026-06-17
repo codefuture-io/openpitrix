@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateGroupParams creates a new CreateGroupParams object
@@ -59,7 +59,8 @@ func NewCreateGroupParamsWithHTTPClient(client *http.Client) *CreateGroupParams 
 	}
 }
 
-/*CreateGroupParams contains all the parameters to send to the API endpoint
+/*
+CreateGroupParams contains all the parameters to send to the API endpoint
 for the create group operation typically these are written to a http.Request
 */
 type CreateGroupParams struct {

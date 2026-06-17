@@ -11,9 +11,9 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"openpitrix.io/openpitrix/pkg/client/config"
-	"openpitrix.io/openpitrix/pkg/topic"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/client/config"
+	"github.com/codefuture-io/openpitrix/pkg/topic"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 func GetIoClient(conf *ClientConfig) *IoClient {

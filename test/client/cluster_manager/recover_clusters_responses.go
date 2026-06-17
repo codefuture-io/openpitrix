@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // RecoverClustersReader is a Reader for the RecoverClusters structure.
@@ -42,7 +42,8 @@ func NewRecoverClustersOK() *RecoverClustersOK {
 	return &RecoverClustersOK{}
 }
 
-/*RecoverClustersOK handles this case with default header values.
+/*
+RecoverClustersOK handles this case with default header values.
 
 A successful response.
 */

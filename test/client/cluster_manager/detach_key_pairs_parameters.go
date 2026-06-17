@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewDetachKeyPairsParams creates a new DetachKeyPairsParams object
@@ -59,7 +59,8 @@ func NewDetachKeyPairsParamsWithHTTPClient(client *http.Client) *DetachKeyPairsP
 	}
 }
 
-/*DetachKeyPairsParams contains all the parameters to send to the API endpoint
+/*
+DetachKeyPairsParams contains all the parameters to send to the API endpoint
 for the detach key pairs operation typically these are written to a http.Request
 */
 type DetachKeyPairsParams struct {

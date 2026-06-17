@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CanDoReader is a Reader for the CanDo structure.
@@ -42,7 +42,8 @@ func NewCanDoOK() *CanDoOK {
 	return &CanDoOK{}
 }
 
-/*CanDoOK handles this case with default header values.
+/*
+CanDoOK handles this case with default header values.
 
 A successful response.
 */

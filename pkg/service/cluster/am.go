@@ -8,17 +8,17 @@ import (
 	"context"
 	"fmt"
 
-	pilotclient "openpitrix.io/openpitrix/pkg/client/pilot"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
-	"openpitrix.io/openpitrix/pkg/util/reflectutil"
-	"openpitrix.io/openpitrix/pkg/util/tlsutil"
+	pilotclient "github.com/codefuture-io/openpitrix/pkg/client/pilot"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/reflectutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/tlsutil"
 )
 
 func checkPermissionAndTransition(ctx context.Context, cluster *models.Cluster, status []string) error {

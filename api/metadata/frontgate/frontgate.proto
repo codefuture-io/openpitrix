@@ -6,7 +6,7 @@ syntax = "proto3";
 
 package metadata.frontgate;
 
-option go_package = "openpitrix.io/openpitrix/pkg/pb/metadata/frontgate;pbfrontgate";
+option go_package = "github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate;pbfrontgate";
 
 import "metadata/types/types.proto";
 import "metadata/types/etcd.proto";

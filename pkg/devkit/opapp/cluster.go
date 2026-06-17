@@ -11,7 +11,7 @@ import (
 	"html/template"
 	"regexp"
 
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type ClusterConfTemplate struct {

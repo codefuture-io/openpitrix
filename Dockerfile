@@ -6,12 +6,12 @@ FROM golang:1.13-alpine as builder
 
 RUN apk add --no-cache git curl openssl
 
-WORKDIR /go/src/openpitrix.io/openpitrix/
+WORKDIR /go/src/github.com/codefuture-io/openpitrix/
 COPY . .
 
 RUN mkdir -p /openpitrix_bin
-RUN go generate openpitrix.io/openpitrix/pkg/version && \
-	CGO_ENABLED=0 GOBIN=/openpitrix_bin go install -ldflags '-w -s' -v -tags netgo openpitrix.io/openpitrix/cmd/hyperpitrix
+RUN go generate github.com/codefuture-io/openpitrix/pkg/version && \
+	CGO_ENABLED=0 GOBIN=/openpitrix_bin go install -ldflags '-w -s' -v -tags netgo github.com/codefuture-io/openpitrix/cmd/hyperpitrix
 
 FROM alpine:3.7
 

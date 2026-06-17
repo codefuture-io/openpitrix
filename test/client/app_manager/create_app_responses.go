@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateAppReader is a Reader for the CreateApp structure.
@@ -42,7 +42,8 @@ func NewCreateAppOK() *CreateAppOK {
 	return &CreateAppOK{}
 }
 
-/*CreateAppOK handles this case with default header values.
+/*
+CreateAppOK handles this case with default header values.
 
 A successful response.
 */

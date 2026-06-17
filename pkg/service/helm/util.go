@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
-	"openpitrix.io/openpitrix/pkg/util/yamlutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/yamlutil"
 )
 
 func ConvertJsonToYaml(data []byte) ([]byte, error) {

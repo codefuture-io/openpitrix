@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeRepoEventsReader is a Reader for the DescribeRepoEvents structure.
@@ -42,7 +42,8 @@ func NewDescribeRepoEventsOK() *DescribeRepoEventsOK {
 	return &DescribeRepoEventsOK{}
 }
 
-/*DescribeRepoEventsOK handles this case with default header values.
+/*
+DescribeRepoEventsOK handles this case with default header values.
 
 A successful response.
 */

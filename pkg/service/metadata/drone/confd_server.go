@@ -16,10 +16,10 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"openpitrix.io/openpitrix/pkg/libconfd"
-	"openpitrix.io/openpitrix/pkg/libconfd/backends"
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/libconfd"
+	"github.com/codefuture-io/openpitrix/pkg/libconfd/backends"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 type ConfdServer struct {

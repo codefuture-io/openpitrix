@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteAppsReader is a Reader for the DeleteApps structure.
@@ -42,7 +42,8 @@ func NewDeleteAppsOK() *DeleteAppsOK {
 	return &DeleteAppsOK{}
 }
 
-/*DeleteAppsOK handles this case with default header values.
+/*
+DeleteAppsOK handles this case with default header values.
 
 A successful response.
 */

@@ -21,12 +21,12 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 
 	"helm.sh/helm/v3/pkg/chart"
 	"helm.sh/helm/v3/pkg/release"
@@ -34,11 +34,11 @@ import (
 	"k8s.io/api/extensions/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"openpitrix.io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/models"
 
 	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
 
-	runtimeclient "openpitrix.io/openpitrix/pkg/client/runtime"
+	runtimeclient "github.com/codefuture-io/openpitrix/pkg/client/runtime"
 )
 
 const (
@@ -54,7 +54,7 @@ var (
 	ClusterNameRegExp = regexp.MustCompile(ClusterNameReg)
 )
 
-//Helm kubernetes proxy
+// Helm kubernetes proxy
 type Proxy struct {
 	ctx          context.Context
 	RuntimeId    string

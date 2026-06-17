@@ -12,8 +12,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"openpitrix.io/openpitrix/pkg/devkit"
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/devkit"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
 )
 
 type createCmd struct {

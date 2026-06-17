@@ -6,8 +6,8 @@
 package main
 
 import (
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/service/repo_indexer"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/service/repo_indexer"
 )
 
 func main() {

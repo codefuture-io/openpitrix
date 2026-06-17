@@ -4,7 +4,7 @@
 
 package helm
 
-import "openpitrix.io/openpitrix/pkg/constants"
+import "github.com/codefuture-io/openpitrix/pkg/constants"
 
 const (
 	Provider       = constants.ProviderKubernetes

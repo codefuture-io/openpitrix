@@ -8,13 +8,13 @@ import (
 	"context"
 	"fmt"
 
-	runtimeclient "openpitrix.io/openpitrix/pkg/client/runtime"
-	providerclient "openpitrix.io/openpitrix/pkg/client/runtime_provider"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/plugins"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	runtimeclient "github.com/codefuture-io/openpitrix/pkg/client/runtime"
+	providerclient "github.com/codefuture-io/openpitrix/pkg/client/runtime_provider"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/plugins"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 func getProviderClientFromProvider(ctx context.Context, provider string) (pb.RuntimeProviderManagerClient, error) {

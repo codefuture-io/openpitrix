@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateGroupReader is a Reader for the CreateGroup structure.
@@ -42,7 +42,8 @@ func NewCreateGroupOK() *CreateGroupOK {
 	return &CreateGroupOK{}
 }
 
-/*CreateGroupOK handles this case with default header values.
+/*
+CreateGroupOK handles this case with default header values.
 
 A successful response.
 */

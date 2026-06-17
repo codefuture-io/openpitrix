@@ -5,7 +5,7 @@
 package models
 
 import (
-	"openpitrix.io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
 )
 
 type TaskLayer struct {

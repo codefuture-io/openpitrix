@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeAppsReader is a Reader for the DescribeApps structure.
@@ -42,7 +42,8 @@ func NewDescribeAppsOK() *DescribeAppsOK {
 	return &DescribeAppsOK{}
 }
 
-/*DescribeAppsOK handles this case with default header values.
+/*
+DescribeAppsOK handles this case with default header values.
 
 A successful response.
 */

@@ -7,7 +7,7 @@ package db
 import (
 	"context"
 
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 // EventReceiver is a sentinel EventReceiver; use it if the caller doesn't supply one

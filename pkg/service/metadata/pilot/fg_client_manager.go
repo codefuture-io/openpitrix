@@ -14,9 +14,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbfrontgate "openpitrix.io/openpitrix/pkg/pb/metadata/frontgate"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbfrontgate "github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 type FrontgateClientManager struct {

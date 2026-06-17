@@ -56,28 +56,28 @@ generate: $(PROTO_FILES) Makefile
 	@echo "ok"
 
 metadata_types: ${METADATA_TYPES_PBFILES}
-	mkdir -p $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/types
-	rm -rf   $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/types/*
+	mkdir -p $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/types
+	rm -rf   $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/types/*
 	protoc $(PROTOC_FLAGS) --go_out=$(GOPATH)/src ${METADATA_TYPES_PBFILES}
 	ls $(PWD)/../build/replace
-	go run $(PWD)/../build/replace/main.go -old=,omitempty -new= -dir=$(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/types
+	go run $(PWD)/../build/replace/main.go -old=,omitempty -new= -dir=$(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/types
 	@echo "ok"
 
 metadata_drone: ${METADATA_DRONE_PBFILES}
-	mkdir -p $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/drone
-	rm -rf   $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/drone/*
+	mkdir -p $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/drone
+	rm -rf   $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/drone/*
 	protoc $(PROTOC_FLAGS) --go_out=plugins=grpc:$(GOPATH)/src ${METADATA_DRONE_PBFILES}
 	@echo "ok"
 
 metadata_frontgate: ${METADATA_FRONTGATE_PBFILES}
-	mkdir -p $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/frontgate
-	rm -rf   $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/frontgate/*
+	mkdir -p $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate
+	rm -rf   $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate/*
 	protoc $(PROTOC_FLAGS) --stdrpc_out=$(GOPATH)/src ${METADATA_FRONTGATE_PBFILES}
 	@echo "ok"
 
 metadata_pilot: ${METADATA_PILOT_PBFILES}
-	mkdir -p $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/pilot
-	rm -rf   $(GOPATH)/src/openpitrix.io/openpitrix/pkg/pb/metadata/pilot/*
+	mkdir -p $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/pilot
+	rm -rf   $(GOPATH)/src/github.com/codefuture-io/openpitrix/pkg/pb/metadata/pilot/*
 	protoc $(PROTOC_FLAGS) --go_out=plugins=grpc:$(GOPATH)/src ${METADATA_PILOT_PBFILES}
 	@echo "ok"
 

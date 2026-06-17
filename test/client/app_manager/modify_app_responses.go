@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyAppReader is a Reader for the ModifyApp structure.
@@ -42,7 +42,8 @@ func NewModifyAppOK() *ModifyAppOK {
 	return &ModifyAppOK{}
 }
 
-/*ModifyAppOK handles this case with default header values.
+/*
+ModifyAppOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyRuntimeCredentialReader is a Reader for the ModifyRuntimeCredential structure.
@@ -42,7 +42,8 @@ func NewModifyRuntimeCredentialOK() *ModifyRuntimeCredentialOK {
 	return &ModifyRuntimeCredentialOK{}
 }
 
-/*ModifyRuntimeCredentialOK handles this case with default header values.
+/*
+ModifyRuntimeCredentialOK handles this case with default header values.
 
 A successful response.
 */

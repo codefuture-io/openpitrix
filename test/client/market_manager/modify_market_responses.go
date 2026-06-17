@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyMarketReader is a Reader for the ModifyMarket structure.
@@ -42,7 +42,8 @@ func NewModifyMarketOK() *ModifyMarketOK {
 	return &ModifyMarketOK{}
 }
 
-/*ModifyMarketOK handles this case with default header values.
+/*
+ModifyMarketOK handles this case with default header values.
 
 A successful response.
 */

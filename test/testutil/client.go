@@ -13,9 +13,9 @@ import (
 	"github.com/go-openapi/strfmt"
 	flag "github.com/spf13/pflag"
 
-	"openpitrix.io/openpitrix/pkg/client/config"
-	"openpitrix.io/openpitrix/pkg/constants"
-	apiclient "openpitrix.io/openpitrix/test/client"
+	"github.com/codefuture-io/openpitrix/pkg/client/config"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	apiclient "github.com/codefuture-io/openpitrix/test/client"
 )
 
 const UserSystem = constants.UserSystem

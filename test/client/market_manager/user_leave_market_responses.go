@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // UserLeaveMarketReader is a Reader for the UserLeaveMarket structure.
@@ -42,7 +42,8 @@ func NewUserLeaveMarketOK() *UserLeaveMarketOK {
 	return &UserLeaveMarketOK{}
 }
 
-/*UserLeaveMarketOK handles this case with default header values.
+/*
+UserLeaveMarketOK handles this case with default header values.
 
 A successful response.
 */

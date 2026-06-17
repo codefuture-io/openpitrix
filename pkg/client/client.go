@@ -7,10 +7,10 @@ package client
 import (
 	"context"
 
-	accessclient "openpitrix.io/openpitrix/pkg/client/access"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/sender"
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
+	accessclient "github.com/codefuture-io/openpitrix/pkg/client/access"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
 )
 
 func SetSystemUserToContext(ctx context.Context) context.Context {

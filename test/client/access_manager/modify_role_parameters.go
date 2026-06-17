@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewModifyRoleParams creates a new ModifyRoleParams object
@@ -59,7 +59,8 @@ func NewModifyRoleParamsWithHTTPClient(client *http.Client) *ModifyRoleParams {
 	}
 }
 
-/*ModifyRoleParams contains all the parameters to send to the API endpoint
+/*
+ModifyRoleParams contains all the parameters to send to the API endpoint
 for the modify role operation typically these are written to a http.Request
 */
 type ModifyRoleParams struct {

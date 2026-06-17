@@ -15,8 +15,8 @@ import (
 	flag "github.com/spf13/pflag"
 	yaml "gopkg.in/yaml.v2"
 
-	. "openpitrix.io/openpitrix/cmd/opctl/common"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	. "github.com/codefuture-io/openpitrix/cmd/opctl/common"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 const AllCmdTmpl = `
@@ -34,9 +34,9 @@ import (
 	"github.com/go-openapi/strfmt"
 
 {{- range $index, $element := .services}}
-	"openpitrix.io/openpitrix/test/client/{{snakeCase $element}}"
+	"github.com/codefuture-io/openpitrix/test/client/{{snakeCase $element}}"
 {{- end}}
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 var AllCmd = []Cmd{

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // BindUserRoleReader is a Reader for the BindUserRole structure.
@@ -42,7 +42,8 @@ func NewBindUserRoleOK() *BindUserRoleOK {
 	return &BindUserRoleOK{}
 }
 
-/*BindUserRoleOK handles this case with default header values.
+/*
+BindUserRoleOK handles this case with default header values.
 
 A successful response.
 */

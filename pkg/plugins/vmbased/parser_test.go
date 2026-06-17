@@ -7,9 +7,9 @@ package vmbased
 import (
 	"testing"
 
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 const hbaseMustache = `

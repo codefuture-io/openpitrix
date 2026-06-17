@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type Metadata struct {
@@ -23,21 +23,22 @@ type Metadata struct {
 /*
 Compose cluster info into the following format,
 in order to register cluster to configuration management service.
-{
-	"clusters": {
-		"<cluster_id>": {
-	 		"hosts": {
-				<The data from the function GetHostsCnodes>
-	 		},
-	 		"cluster": {
-				<The data from the function GetClusterMetadataCnodes>
-	 		},
-	 		"env": { # optional
-				<The data from the function GetEnvCnodes>
-	 		}
-   		}
+
+	{
+		"clusters": {
+			"<cluster_id>": {
+		 		"hosts": {
+					<The data from the function GetHostsCnodes>
+		 		},
+		 		"cluster": {
+					<The data from the function GetClusterMetadataCnodes>
+		 		},
+		 		"env": { # optional
+					<The data from the function GetEnvCnodes>
+		 		}
+	   		}
+		}
 	}
-}
 */
 func (m *Metadata) GetClusterCnodes(ctx context.Context) map[string]interface{} {
 	logger.Info(ctx, "Composing cluster %s", m.ClusterWrapper.Cluster.ClusterId)
@@ -79,15 +80,15 @@ func (m *Metadata) GetClusterCnodes(ctx context.Context) map[string]interface{} 
 }
 
 /*
-{
-	"clusters": {
-		"<cluster_id>": {
-	 		"env": { # optional
-				<The data from the function GetEnvCnodes>
-	 		}
-   		}
+	{
+		"clusters": {
+			"<cluster_id>": {
+		 		"env": { # optional
+					<The data from the function GetEnvCnodes>
+		 		}
+	   		}
+		}
 	}
-}
 */
 func (m *Metadata) GetClusterEnvCnodes(ctx context.Context) map[string]interface{} {
 	logger.Info(ctx, "Composing cluster %s env", m.ClusterWrapper.Cluster.ClusterId)
@@ -111,11 +112,11 @@ func (m *Metadata) GetClusterEnvCnodes(ctx context.Context) map[string]interface
 }
 
 /*
-{
-	"self": {
-		<The data from the function GetMappingCnodes below>
-   	}
-}
+	{
+		"self": {
+			<The data from the function GetMappingCnodes below>
+	   	}
+	}
 */
 func (m *Metadata) GetClusterMappingCnodes(ctx context.Context) map[string]interface{} {
 	logger.Info(ctx, "Composing cluster %s mapping", m.ClusterWrapper.Cluster.ClusterId)
@@ -130,11 +131,11 @@ func (m *Metadata) GetClusterMappingCnodes(ctx context.Context) map[string]inter
 }
 
 /*
-{
-	"self": {
-		<The data from the function GetMappingCnodes below>
-   	}
-}
+	{
+		"self": {
+			<The data from the function GetMappingCnodes below>
+	   	}
+	}
 */
 func (m *Metadata) GetClusterNodesMappingCnodes(ctx context.Context, nodeIds []string) map[string]interface{} {
 	logger.Info(ctx, "Composing cluster %s mapping", m.ClusterWrapper.Cluster.ClusterId)
@@ -145,15 +146,15 @@ func (m *Metadata) GetClusterNodesMappingCnodes(ctx context.Context, nodeIds []s
 }
 
 /*
-{
-	"clusters": {
-		"<cluster_id>": {
-	 		"hosts": {
-				<The data from the function GetHostsCnodes>
-	 		}
-   		}
+	{
+		"clusters": {
+			"<cluster_id>": {
+		 		"hosts": {
+					<The data from the function GetHostsCnodes>
+		 		}
+	   		}
+		}
 	}
-}
 */
 func (m *Metadata) GetClusterNodesCnodes(ctx context.Context, nodeIds []string) map[string]interface{} {
 	logger.Info(ctx, "Composing cluster %s nodes", m.ClusterWrapper.Cluster.ClusterId)
@@ -175,15 +176,15 @@ func (m *Metadata) GetClusterNodesCnodes(ctx context.Context, nodeIds []string) 
 }
 
 /*
-{
-	"clusters": {
-		"<cluster_id>": {
-	 		"hosts": {
-				<The data from the function GetEmptyHostsCnodes>
-	 		}
-   		}
+	{
+		"clusters": {
+			"<cluster_id>": {
+		 		"hosts": {
+					<The data from the function GetEmptyHostsCnodes>
+		 		}
+	   		}
+		}
 	}
-}
 */
 func (m *Metadata) GetEmptyClusterNodeCnodes(ctx context.Context, nodeIds []string) map[string]interface{} {
 	logger.Info(ctx, "Composing cluster %s empty nodes", m.ClusterWrapper.Cluster.ClusterId)
@@ -205,22 +206,24 @@ func (m *Metadata) GetEmptyClusterNodeCnodes(ctx context.Context, nodeIds []stri
 }
 
 /*
-{
-    "<role>": {
-    	"<instance_id>": {
-			"ip":<ip>,
-			"server_id":<server_id>,
-			"pub_key": <pub_key>
+	{
+	    "<role>": {
+	    	"<instance_id>": {
+				"ip":<ip>,
+				"server_id":<server_id>,
+				"pub_key": <pub_key>
+		  	}
 	  	}
-  	}
-}
+	}
+
 or (without role)
-{
-  	"<instance_id>": {
-		"ip":<ip>,
-	 	"server_id":<server_id>
-  	}
-}
+
+	{
+	  	"<instance_id>": {
+			"ip":<ip>,
+		 	"server_id":<server_id>
+	  	}
+	}
 */
 func (m *Metadata) GetHostsCnodes(ctx context.Context, nodeIds []string) map[string]interface{} {
 	hosts := make(map[string]interface{})
@@ -286,15 +289,17 @@ func (m *Metadata) GetHostsCnodes(ctx context.Context, nodeIds []string) map[str
 }
 
 /*
-{
-    "<role>": {
-    	"<instance_id>": ""
-  	}
-}
+	{
+	    "<role>": {
+	    	"<instance_id>": ""
+	  	}
+	}
+
 or (without role)
-{
-  	"<instance_id>": ""
-}
+
+	{
+	  	"<instance_id>": ""
+	}
 */
 func (m *Metadata) GetEmptyHostsCnodes(nodeIds []string) map[string]interface{} {
 	hosts := make(map[string]interface{})
@@ -315,16 +320,16 @@ func (m *Metadata) GetEmptyHostsCnodes(nodeIds []string) map[string]interface{} 
 }
 
 /*
-{
-	"cluster_id":  <cluster_id>,
-	"app_id":      <app_id>,
-	"subnet":      <subnet>,
-	"user_id":     <user_id>,
-	"global_uuid": <global_uuid>,
-	"zone":        <zone>,
-	"provider":    <provider>,
-	"runtime_url": <runtime_url>,
-}
+	{
+		"cluster_id":  <cluster_id>,
+		"app_id":      <app_id>,
+		"subnet":      <subnet>,
+		"user_id":     <user_id>,
+		"global_uuid": <global_uuid>,
+		"zone":        <zone>,
+		"provider":    <provider>,
+		"runtime_url": <runtime_url>,
+	}
 */
 func (m *Metadata) GetClusterMetadataCnodes() map[string]interface{} {
 	clusterMetadata := map[string]interface{}{
@@ -342,19 +347,19 @@ func (m *Metadata) GetClusterMetadataCnodes() map[string]interface{} {
 }
 
 /*
-{
-  	"<role>": {
-	 	"p1": "v1",
-	 	"p2": "v2"
-  	}
-}
+	{
+	  	"<role>": {
+		 	"p1": "v1",
+		 	"p2": "v2"
+	  	}
+	}
 
 or (without role)
 
-{
-  	"p1": "v1",
-  	"p2": "v2"
-}
+	{
+	  	"p1": "v1",
+	  	"p2": "v2"
+	}
 */
 func (m *Metadata) GetEnvCnodes(ctx context.Context) map[string]interface{} {
 	result := make(map[string]interface{})
@@ -378,15 +383,15 @@ func (m *Metadata) GetEnvCnodes(ctx context.Context) map[string]interface{} {
 }
 
 /*
-{
-  	clusters: {
-		<cluster_id>: {
-			<RegisterNodeAdding/RegisterNodeDeleting>: {
-				<The data from the function GetHostsCnodes>
+	{
+	  	clusters: {
+			<cluster_id>: {
+				<RegisterNodeAdding/RegisterNodeDeleting>: {
+					<The data from the function GetHostsCnodes>
+				}
 			}
 		}
 	}
-}
 */
 func (m *Metadata) GetScalingCnodes(ctx context.Context, nodeIds []string, path string) map[string]interface{} {
 	hosts := m.GetHostsCnodes(ctx, nodeIds)
@@ -418,11 +423,11 @@ func (m *Metadata) GetCmdCnodes(nodeId string, cmd *models.Cmd) *models.CmdCnode
 }
 
 /*
-{
-  	clusters: {
-		<cluster_id>: ""
+	{
+	  	clusters: {
+			<cluster_id>: ""
+		}
 	}
-}
 */
 func (m *Metadata) GetEmptyClusterCnodes() map[string]interface{} {
 	return map[string]interface{}{
@@ -433,11 +438,11 @@ func (m *Metadata) GetEmptyClusterCnodes() map[string]interface{} {
 }
 
 /*
-{
-  	self: {
-    	<ip>: ""
-  	}
-}
+	{
+	  	self: {
+	    	<ip>: ""
+	  	}
+	}
 */
 func (m *Metadata) GetEmptyClusterMappingCnodes() map[string]interface{} {
 	cnodes := make(map[string]interface{})
@@ -449,11 +454,11 @@ func (m *Metadata) GetEmptyClusterMappingCnodes() map[string]interface{} {
 }
 
 /*
-{
-  	self: {
-    	<ip>: ""
-  	}
-}
+	{
+	  	self: {
+	    	<ip>: ""
+	  	}
+	}
 */
 func (m *Metadata) GetEmptyClusterNodeMappingCnodes(ctx context.Context, nodeIds []string) map[string]interface{} {
 	cnodes := make(map[string]interface{})
@@ -464,17 +469,17 @@ func (m *Metadata) GetEmptyClusterNodeMappingCnodes(ctx context.Context, nodeIds
 }
 
 /*
-{
-	"<ip>":
 	{
-		"host":"/clusters/</cluster_id>/hosts/master/<instance_id>",
-		"hosts":"/clusters/</cluster_id>/hosts",
-		"cluster":"/clusters/</cluster_id>/cluster",
-		"env":"/clusters/</cluster_id>/env/<role>",
-		"cmd":"/clusters/<cluster_id>/cmd/<instance_id>,
-		"links":"/clusters/<cluster_id>/links"
+		"<ip>":
+		{
+			"host":"/clusters/</cluster_id>/hosts/master/<instance_id>",
+			"hosts":"/clusters/</cluster_id>/hosts",
+			"cluster":"/clusters/</cluster_id>/cluster",
+			"env":"/clusters/</cluster_id>/env/<role>",
+			"cmd":"/clusters/<cluster_id>/cmd/<instance_id>,
+			"links":"/clusters/<cluster_id>/links"
+		}
 	}
-}
 */
 func (m *Metadata) GetMappingCnodes(nodeIds []string) map[string]interface{} {
 	cnodes := make(map[string]interface{})

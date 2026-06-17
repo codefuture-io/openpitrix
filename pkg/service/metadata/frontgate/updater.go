@@ -10,17 +10,17 @@ import (
 
 	"google.golang.org/grpc"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbdrone "openpitrix.io/openpitrix/pkg/pb/metadata/drone"
-	pbpilot "openpitrix.io/openpitrix/pkg/pb/metadata/pilot"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/service/metadata/drone/droneutil"
-	"openpitrix.io/openpitrix/pkg/util/gziputil"
-	"openpitrix.io/openpitrix/pkg/util/httputil"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
-	"openpitrix.io/openpitrix/pkg/util/retryutil"
-	"openpitrix.io/openpitrix/pkg/version"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbdrone "github.com/codefuture-io/openpitrix/pkg/pb/metadata/drone"
+	pbpilot "github.com/codefuture-io/openpitrix/pkg/pb/metadata/pilot"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/drone/droneutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/gziputil"
+	"github.com/codefuture-io/openpitrix/pkg/util/httputil"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/retryutil"
+	"github.com/codefuture-io/openpitrix/pkg/version"
 )
 
 var (

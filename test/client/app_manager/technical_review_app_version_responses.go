@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // TechnicalReviewAppVersionReader is a Reader for the TechnicalReviewAppVersion structure.
@@ -42,7 +42,8 @@ func NewTechnicalReviewAppVersionOK() *TechnicalReviewAppVersionOK {
 	return &TechnicalReviewAppVersionOK{}
 }
 
-/*TechnicalReviewAppVersionOK handles this case with default header values.
+/*
+TechnicalReviewAppVersionOK handles this case with default header values.
 
 A successful response.
 */

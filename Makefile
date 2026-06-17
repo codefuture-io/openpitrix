@@ -3,7 +3,7 @@
 # that can be found in the LICENSE file.
 
 TARG.Name:=openpitrix
-TRAG.Gopkg:=openpitrix.io/openpitrix
+TRAG.Gopkg:=github.com/codefuture-io/openpitrix
 TRAG.Version:=$(TRAG.Gopkg)/pkg/version
 
 DOCKER_TAGS=latest
@@ -86,7 +86,7 @@ generate: generate-global-config ## Generate code from protobuf file in docker
 
 .PHONY: generate-global-config
 generate-global-config: ## Generate global config
-	$(RUN_IN_DOCKER) go generate openpitrix.io/openpitrix/deploy/config
+	$(RUN_IN_DOCKER) go generate github.com/codefuture-io/openpitrix/deploy/config
 
 .PHONY: fmt-all
 fmt-all: ## Format all code

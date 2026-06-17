@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewValidateUserPasswordParams creates a new ValidateUserPasswordParams object
@@ -59,7 +59,8 @@ func NewValidateUserPasswordParamsWithHTTPClient(client *http.Client) *ValidateU
 	}
 }
 
-/*ValidateUserPasswordParams contains all the parameters to send to the API endpoint
+/*
+ValidateUserPasswordParams contains all the parameters to send to the API endpoint
 for the validate user password operation typically these are written to a http.Request
 */
 type ValidateUserPasswordParams struct {

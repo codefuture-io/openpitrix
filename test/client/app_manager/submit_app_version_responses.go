@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // SubmitAppVersionReader is a Reader for the SubmitAppVersion structure.
@@ -42,7 +42,8 @@ func NewSubmitAppVersionOK() *SubmitAppVersionOK {
 	return &SubmitAppVersionOK{}
 }
 
-/*SubmitAppVersionOK handles this case with default header values.
+/*
+SubmitAppVersionOK handles this case with default header values.
 
 A successful response.
 */

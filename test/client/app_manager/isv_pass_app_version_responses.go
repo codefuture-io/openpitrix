@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // IsvPassAppVersionReader is a Reader for the IsvPassAppVersion structure.
@@ -42,7 +42,8 @@ func NewIsvPassAppVersionOK() *IsvPassAppVersionOK {
 	return &IsvPassAppVersionOK{}
 }
 
-/*IsvPassAppVersionOK handles this case with default header values.
+/*
+IsvPassAppVersionOK handles this case with default header values.
 
 A successful response.
 */

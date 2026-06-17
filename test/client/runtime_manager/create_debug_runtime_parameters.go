@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateDebugRuntimeParams creates a new CreateDebugRuntimeParams object
@@ -59,7 +59,8 @@ func NewCreateDebugRuntimeParamsWithHTTPClient(client *http.Client) *CreateDebug
 	}
 }
 
-/*CreateDebugRuntimeParams contains all the parameters to send to the API endpoint
+/*
+CreateDebugRuntimeParams contains all the parameters to send to the API endpoint
 for the create debug runtime operation typically these are written to a http.Request
 */
 type CreateDebugRuntimeParams struct {

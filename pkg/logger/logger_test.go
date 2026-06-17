@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
 )
 
 func readBuf(buf *bytes.Buffer) string {

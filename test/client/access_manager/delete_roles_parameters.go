@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewDeleteRolesParams creates a new DeleteRolesParams object
@@ -59,7 +59,8 @@ func NewDeleteRolesParamsWithHTTPClient(client *http.Client) *DeleteRolesParams 
 	}
 }
 
-/*DeleteRolesParams contains all the parameters to send to the API endpoint
+/*
+DeleteRolesParams contains all the parameters to send to the API endpoint
 for the delete roles operation typically these are written to a http.Request
 */
 type DeleteRolesParams struct {

@@ -11,10 +11,10 @@ import (
 	"helm.sh/helm/v3/pkg/chart/loader"
 	"helm.sh/helm/v3/pkg/repo"
 
-	"openpitrix.io/openpitrix/pkg/devkit"
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/repoiface/wrapper"
+	"github.com/codefuture-io/openpitrix/pkg/devkit"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/repoiface/wrapper"
 )
 
 const (

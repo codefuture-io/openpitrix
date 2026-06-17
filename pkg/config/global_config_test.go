@@ -7,8 +7,8 @@ package config_test
 import (
 	"testing"
 
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
 )
 
 func Example_unmarshalInitConfig() {

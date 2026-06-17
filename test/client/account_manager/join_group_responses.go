@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // JoinGroupReader is a Reader for the JoinGroup structure.
@@ -42,7 +42,8 @@ func NewJoinGroupOK() *JoinGroupOK {
 	return &JoinGroupOK{}
 }
 
-/*JoinGroupOK handles this case with default header values.
+/*
+JoinGroupOK handles this case with default header values.
 
 A successful response.
 */

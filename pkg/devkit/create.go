@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
 )
 
 const defaultClusterJsonTmpl = `

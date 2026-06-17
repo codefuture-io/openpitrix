@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteRolesReader is a Reader for the DeleteRoles structure.
@@ -42,7 +42,8 @@ func NewDeleteRolesOK() *DeleteRolesOK {
 	return &DeleteRolesOK{}
 }
 
-/*DeleteRolesOK handles this case with default header values.
+/*
+DeleteRolesOK handles this case with default header values.
 
 A successful response.
 */

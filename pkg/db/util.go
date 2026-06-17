@@ -7,7 +7,7 @@ package db
 import (
 	"github.com/fatih/structs"
 
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 func GetColumnsFromStruct(s interface{}) []string {

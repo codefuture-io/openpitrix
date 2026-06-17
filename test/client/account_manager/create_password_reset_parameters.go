@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreatePasswordResetParams creates a new CreatePasswordResetParams object
@@ -59,7 +59,8 @@ func NewCreatePasswordResetParamsWithHTTPClient(client *http.Client) *CreatePass
 	}
 }
 
-/*CreatePasswordResetParams contains all the parameters to send to the API endpoint
+/*
+CreatePasswordResetParams contains all the parameters to send to the API endpoint
 for the create password reset operation typically these are written to a http.Request
 */
 type CreatePasswordResetParams struct {

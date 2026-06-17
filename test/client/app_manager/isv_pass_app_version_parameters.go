@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewIsvPassAppVersionParams creates a new IsvPassAppVersionParams object
@@ -59,7 +59,8 @@ func NewIsvPassAppVersionParamsWithHTTPClient(client *http.Client) *IsvPassAppVe
 	}
 }
 
-/*IsvPassAppVersionParams contains all the parameters to send to the API endpoint
+/*
+IsvPassAppVersionParams contains all the parameters to send to the API endpoint
 for the isv pass app version operation typically these are written to a http.Request
 */
 type IsvPassAppVersionParams struct {

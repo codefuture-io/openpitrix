@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewUpgradeReleaseParams creates a new UpgradeReleaseParams object
@@ -59,7 +59,8 @@ func NewUpgradeReleaseParamsWithHTTPClient(client *http.Client) *UpgradeReleaseP
 	}
 }
 
-/*UpgradeReleaseParams contains all the parameters to send to the API endpoint
+/*
+UpgradeReleaseParams contains all the parameters to send to the API endpoint
 for the upgrade release operation typically these are written to a http.Request
 */
 type UpgradeReleaseParams struct {

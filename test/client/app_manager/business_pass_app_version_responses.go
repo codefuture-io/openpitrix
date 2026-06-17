@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // BusinessPassAppVersionReader is a Reader for the BusinessPassAppVersion structure.
@@ -42,7 +42,8 @@ func NewBusinessPassAppVersionOK() *BusinessPassAppVersionOK {
 	return &BusinessPassAppVersionOK{}
 }
 
-/*BusinessPassAppVersionOK handles this case with default header values.
+/*
+BusinessPassAppVersionOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeGroupsReader is a Reader for the DescribeGroups structure.
@@ -42,7 +42,8 @@ func NewDescribeGroupsOK() *DescribeGroupsOK {
 	return &DescribeGroupsOK{}
 }
 
-/*DescribeGroupsOK handles this case with default header values.
+/*
+DescribeGroupsOK handles this case with default header values.
 
 A successful response.
 */

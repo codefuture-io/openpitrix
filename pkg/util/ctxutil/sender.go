@@ -10,7 +10,7 @@ import (
 
 	"google.golang.org/grpc/metadata"
 
-	"openpitrix.io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
 )
 
 const (

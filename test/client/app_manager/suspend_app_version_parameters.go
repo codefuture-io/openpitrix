@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewSuspendAppVersionParams creates a new SuspendAppVersionParams object
@@ -59,7 +59,8 @@ func NewSuspendAppVersionParamsWithHTTPClient(client *http.Client) *SuspendAppVe
 	}
 }
 
-/*SuspendAppVersionParams contains all the parameters to send to the API endpoint
+/*
+SuspendAppVersionParams contains all the parameters to send to the API endpoint
 for the suspend app version operation typically these are written to a http.Request
 */
 type SuspendAppVersionParams struct {

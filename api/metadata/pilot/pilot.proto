@@ -6,7 +6,7 @@ syntax = "proto3";
 
 package metadata.pilot;
 
-option go_package = "openpitrix.io/openpitrix/pkg/pb/metadata/pilot;pbpilot";
+option go_package = "github.com/codefuture-io/openpitrix/pkg/pb/metadata/pilot;pbpilot";
 
 import "google/api/annotations.proto";
 import "protoc-gen-swagger/options/annotations.proto";

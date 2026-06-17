@@ -12,9 +12,9 @@ import (
 	"runtime"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbfrontgate "openpitrix.io/openpitrix/pkg/pb/metadata/frontgate"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbfrontgate "github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 func MustLoadFrontgateConfig(path string) *pbtypes.FrontgateConfig {

@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewRollbackClusterParams creates a new RollbackClusterParams object
@@ -59,7 +59,8 @@ func NewRollbackClusterParamsWithHTTPClient(client *http.Client) *RollbackCluste
 	}
 }
 
-/*RollbackClusterParams contains all the parameters to send to the API endpoint
+/*
+RollbackClusterParams contains all the parameters to send to the API endpoint
 for the rollback cluster operation typically these are written to a http.Request
 */
 type RollbackClusterParams struct {

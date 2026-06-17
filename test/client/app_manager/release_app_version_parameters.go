@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewReleaseAppVersionParams creates a new ReleaseAppVersionParams object
@@ -59,7 +59,8 @@ func NewReleaseAppVersionParamsWithHTTPClient(client *http.Client) *ReleaseAppVe
 	}
 }
 
-/*ReleaseAppVersionParams contains all the parameters to send to the API endpoint
+/*
+ReleaseAppVersionParams contains all the parameters to send to the API endpoint
 for the release app version operation typically these are written to a http.Request
 */
 type ReleaseAppVersionParams struct {

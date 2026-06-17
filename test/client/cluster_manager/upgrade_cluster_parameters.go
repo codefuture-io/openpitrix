@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewUpgradeClusterParams creates a new UpgradeClusterParams object
@@ -59,7 +59,8 @@ func NewUpgradeClusterParamsWithHTTPClient(client *http.Client) *UpgradeClusterP
 	}
 }
 
-/*UpgradeClusterParams contains all the parameters to send to the API endpoint
+/*
+UpgradeClusterParams contains all the parameters to send to the API endpoint
 for the upgrade cluster operation typically these are written to a http.Request
 */
 type UpgradeClusterParams struct {

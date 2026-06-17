@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeVendorVerifyInfosReader is a Reader for the DescribeVendorVerifyInfos structure.
@@ -42,7 +42,8 @@ func NewDescribeVendorVerifyInfosOK() *DescribeVendorVerifyInfosOK {
 	return &DescribeVendorVerifyInfosOK{}
 }
 
-/*DescribeVendorVerifyInfosOK handles this case with default header values.
+/*
+DescribeVendorVerifyInfosOK handles this case with default header values.
 
 A successful response.
 */

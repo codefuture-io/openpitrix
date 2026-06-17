@@ -10,9 +10,9 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"openpitrix.io/openpitrix/pkg/etcd"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/util/jwtutil"
+	"github.com/codefuture-io/openpitrix/pkg/etcd"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/util/jwtutil"
 )
 
 var upgrader = websocket.Upgrader{

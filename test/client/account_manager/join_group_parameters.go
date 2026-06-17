@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewJoinGroupParams creates a new JoinGroupParams object
@@ -59,7 +59,8 @@ func NewJoinGroupParamsWithHTTPClient(client *http.Client) *JoinGroupParams {
 	}
 }
 
-/*JoinGroupParams contains all the parameters to send to the API endpoint
+/*
+JoinGroupParams contains all the parameters to send to the API endpoint
 for the join group operation typically these are written to a http.Request
 */
 type JoinGroupParams struct {

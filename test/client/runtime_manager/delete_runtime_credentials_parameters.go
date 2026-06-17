@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewDeleteRuntimeCredentialsParams creates a new DeleteRuntimeCredentialsParams object
@@ -59,7 +59,8 @@ func NewDeleteRuntimeCredentialsParamsWithHTTPClient(client *http.Client) *Delet
 	}
 }
 
-/*DeleteRuntimeCredentialsParams contains all the parameters to send to the API endpoint
+/*
+DeleteRuntimeCredentialsParams contains all the parameters to send to the API endpoint
 for the delete runtime credentials operation typically these are written to a http.Request
 */
 type DeleteRuntimeCredentialsParams struct {

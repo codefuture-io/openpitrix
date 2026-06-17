@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ModifyUserReader is a Reader for the ModifyUser structure.
@@ -42,7 +42,8 @@ func NewModifyUserOK() *ModifyUserOK {
 	return &ModifyUserOK{}
 }
 
-/*ModifyUserOK handles this case with default header values.
+/*
+ModifyUserOK handles this case with default header values.
 
 A successful response.
 */

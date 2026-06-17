@@ -4,7 +4,7 @@
 
 package models
 
-import "openpitrix.io/openpitrix/pkg/db"
+import "github.com/codefuture-io/openpitrix/pkg/db"
 
 var RepoProviderColumns = db.GetColumnsFromStruct(&RepoProvider{})
 

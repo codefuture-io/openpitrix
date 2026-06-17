@@ -7,8 +7,8 @@ package category
 import (
 	"context"
 
-	"openpitrix.io/openpitrix/pkg/manager"
-	"openpitrix.io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
 )
 
 func (p *Server) Checker(ctx context.Context, req interface{}) error {

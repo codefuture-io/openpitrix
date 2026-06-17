@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DeleteCategoriesReader is a Reader for the DeleteCategories structure.
@@ -42,7 +42,8 @@ func NewDeleteCategoriesOK() *DeleteCategoriesOK {
 	return &DeleteCategoriesOK{}
 }
 
-/*DeleteCategoriesOK handles this case with default header values.
+/*
+DeleteCategoriesOK handles this case with default header values.
 
 A successful response.
 */

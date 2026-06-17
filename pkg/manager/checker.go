@@ -10,8 +10,8 @@ import (
 	"github.com/fatih/structs"
 	"github.com/golang/protobuf/ptypes/wrappers"
 
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 type checker struct {

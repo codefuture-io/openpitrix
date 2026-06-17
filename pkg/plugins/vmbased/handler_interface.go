@@ -8,8 +8,8 @@ import (
 	"context"
 	"fmt"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/models"
 )
 
 type ProviderHandlerInterface interface {

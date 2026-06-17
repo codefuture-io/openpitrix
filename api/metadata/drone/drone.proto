@@ -6,7 +6,7 @@ syntax = "proto3";
 
 package metadata.drone;
 
-option go_package = "openpitrix.io/openpitrix/pkg/pb/metadata/drone;pbdrone";
+option go_package = "github.com/codefuture-io/openpitrix/pkg/pb/metadata/drone;pbdrone";
 
 import "metadata/types/types.proto";
 import "metadata/types/confd.proto";

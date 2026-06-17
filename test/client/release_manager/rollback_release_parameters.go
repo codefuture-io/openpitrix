@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewRollbackReleaseParams creates a new RollbackReleaseParams object
@@ -59,7 +59,8 @@ func NewRollbackReleaseParamsWithHTTPClient(client *http.Client) *RollbackReleas
 	}
 }
 
-/*RollbackReleaseParams contains all the parameters to send to the API endpoint
+/*
+RollbackReleaseParams contains all the parameters to send to the API endpoint
 for the rollback release operation typically these are written to a http.Request
 */
 type RollbackReleaseParams struct {

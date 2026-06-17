@@ -11,7 +11,7 @@ import (
 	"io"
 	"strings"
 
-	"openpitrix.io/openpitrix/pkg/util/stringutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/stringutil"
 )
 
 type ArchiveFiles map[string][]byte

@@ -8,14 +8,14 @@ import (
 	"context"
 	"os"
 
-	pbim "codefuture.io/im/pkg/pb"
+	pbim "github.com/codefuture-io/im/pkg/pb"
 
-	pbam "openpitrix.io/iam/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/sender"
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
+	pbam "github.com/codefuture-io/iam/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
 )
 
 func initIAMClient(ctx context.Context) {

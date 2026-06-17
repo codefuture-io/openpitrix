@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeDebugRuntimesReader is a Reader for the DescribeDebugRuntimes structure.
@@ -42,7 +42,8 @@ func NewDescribeDebugRuntimesOK() *DescribeDebugRuntimesOK {
 	return &DescribeDebugRuntimesOK{}
 }
 
-/*DescribeDebugRuntimesOK handles this case with default header values.
+/*
+DescribeDebugRuntimesOK handles this case with default header values.
 
 A successful response.
 */

@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // LeaveGroupReader is a Reader for the LeaveGroup structure.
@@ -42,7 +42,8 @@ func NewLeaveGroupOK() *LeaveGroupOK {
 	return &LeaveGroupOK{}
 }
 
-/*LeaveGroupOK handles this case with default header values.
+/*
+LeaveGroupOK handles this case with default header values.
 
 A successful response.
 */

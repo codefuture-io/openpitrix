@@ -8,14 +8,14 @@ import (
 	"context"
 	"fmt"
 
-	nfpb "openpitrix.io/notification/pkg/pb"
-	nfclient "openpitrix.io/openpitrix/pkg/client/notification"
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/pi"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	nfpb "github.com/codefuture-io/notification/pkg/pb"
+	nfclient "github.com/codefuture-io/openpitrix/pkg/client/notification"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 func OpToNfConfig(opConfig *pb.NotificationConfig) *nfpb.ServiceConfig {

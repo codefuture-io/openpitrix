@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // ValidateEmailServiceReader is a Reader for the ValidateEmailService structure.
@@ -42,7 +42,8 @@ func NewValidateEmailServiceOK() *ValidateEmailServiceOK {
 	return &ValidateEmailServiceOK{}
 }
 
-/*ValidateEmailServiceOK handles this case with default header values.
+/*
+ValidateEmailServiceOK handles this case with default header values.
 
 A successful response.
 */

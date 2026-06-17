@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewSubmitVendorVerifyInfoParams creates a new SubmitVendorVerifyInfoParams object
@@ -59,7 +59,8 @@ func NewSubmitVendorVerifyInfoParamsWithHTTPClient(client *http.Client) *SubmitV
 	}
 }
 
-/*SubmitVendorVerifyInfoParams contains all the parameters to send to the API endpoint
+/*
+SubmitVendorVerifyInfoParams contains all the parameters to send to the API endpoint
 for the submit vendor verify info operation typically these are written to a http.Request
 */
 type SubmitVendorVerifyInfoParams struct {

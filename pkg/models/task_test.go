@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 func TestGetTimeout(t *testing.T) {

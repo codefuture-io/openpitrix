@@ -7,8 +7,8 @@ package isv
 import (
 	"flag"
 
-	"openpitrix.io/openpitrix/pkg/config"
-	"openpitrix.io/openpitrix/pkg/pi"
+	"github.com/codefuture-io/openpitrix/pkg/config"
+	"github.com/codefuture-io/openpitrix/pkg/pi"
 )
 
 var (

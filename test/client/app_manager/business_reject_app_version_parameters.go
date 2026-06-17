@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewBusinessRejectAppVersionParams creates a new BusinessRejectAppVersionParams object
@@ -59,7 +59,8 @@ func NewBusinessRejectAppVersionParamsWithHTTPClient(client *http.Client) *Busin
 	}
 }
 
-/*BusinessRejectAppVersionParams contains all the parameters to send to the API endpoint
+/*
+BusinessRejectAppVersionParams contains all the parameters to send to the API endpoint
 for the business reject app version operation typically these are written to a http.Request
 */
 type BusinessRejectAppVersionParams struct {

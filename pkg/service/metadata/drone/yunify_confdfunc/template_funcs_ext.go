@@ -20,7 +20,7 @@ import (
 
 	yaml "gopkg.in/yaml.v2"
 
-	"openpitrix.io/openpitrix/pkg/libconfd"
+	"github.com/codefuture-io/openpitrix/pkg/libconfd"
 )
 
 //Part of the following func is copied from spf13/hugo and do some refactor.

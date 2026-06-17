@@ -16,13 +16,13 @@ import (
 
 	"github.com/chai2010/jsonmap"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbfrontgate "openpitrix.io/openpitrix/pkg/pb/metadata/frontgate"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/service/metadata/drone/droneutil"
-	"openpitrix.io/openpitrix/pkg/service/metadata/frontgate/frontgateutil"
-	"openpitrix.io/openpitrix/pkg/service/metadata/pilot/pilotutil"
-	"openpitrix.io/openpitrix/pkg/util/funcutil"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbfrontgate "github.com/codefuture-io/openpitrix/pkg/pb/metadata/frontgate"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/drone/droneutil"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/frontgate/frontgateutil"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/pilot/pilotutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/funcutil"
 )
 
 var (

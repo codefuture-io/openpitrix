@@ -10,13 +10,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/test/client"
-	"openpitrix.io/openpitrix/test/client/app_manager"
-	"openpitrix.io/openpitrix/test/client/repo_indexer"
-	"openpitrix.io/openpitrix/test/client/repo_manager"
-	"openpitrix.io/openpitrix/test/models"
-	"openpitrix.io/openpitrix/test/testutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/test/client"
+	"github.com/codefuture-io/openpitrix/test/client/app_manager"
+	"github.com/codefuture-io/openpitrix/test/client/repo_indexer"
+	"github.com/codefuture-io/openpitrix/test/client/repo_manager"
+	"github.com/codefuture-io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/testutil"
 )
 
 var Service = []string{"hyperpitrix", "openpitrix-rp-kubernetes", "openpitrix-rp-qingcloud"}

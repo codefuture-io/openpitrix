@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CreateDebugRuntimeCredentialReader is a Reader for the CreateDebugRuntimeCredential structure.
@@ -42,7 +42,8 @@ func NewCreateDebugRuntimeCredentialOK() *CreateDebugRuntimeCredentialOK {
 	return &CreateDebugRuntimeCredentialOK{}
 }
 
-/*CreateDebugRuntimeCredentialOK handles this case with default header values.
+/*
+CreateDebugRuntimeCredentialOK handles this case with default header values.
 
 A successful response.
 */

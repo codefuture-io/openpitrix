@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
-	"openpitrix.io/openpitrix/pkg/util/jsonutil"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/util/jsonutil"
 )
 
 type OpVersionWrapper struct {

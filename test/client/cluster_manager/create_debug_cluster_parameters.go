@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewCreateDebugClusterParams creates a new CreateDebugClusterParams object
@@ -59,7 +59,8 @@ func NewCreateDebugClusterParamsWithHTTPClient(client *http.Client) *CreateDebug
 	}
 }
 
-/*CreateDebugClusterParams contains all the parameters to send to the API endpoint
+/*
+CreateDebugClusterParams contains all the parameters to send to the API endpoint
 for the create debug cluster operation typically these are written to a http.Request
 */
 type CreateDebugClusterParams struct {

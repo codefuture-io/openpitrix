@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // DescribeAppVersionAuditsReader is a Reader for the DescribeAppVersionAudits structure.
@@ -42,7 +42,8 @@ func NewDescribeAppVersionAuditsOK() *DescribeAppVersionAuditsOK {
 	return &DescribeAppVersionAuditsOK{}
 }
 
-/*DescribeAppVersionAuditsOK handles this case with default header values.
+/*
+DescribeAppVersionAuditsOK handles this case with default header values.
 
 A successful response.
 */

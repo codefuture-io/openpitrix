@@ -15,9 +15,9 @@ import (
 
 	"google.golang.org/grpc"
 
-	"openpitrix.io/openpitrix/pkg/logger"
-	pbdrone "openpitrix.io/openpitrix/pkg/pb/metadata/drone"
-	pbtypes "openpitrix.io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	pbdrone "github.com/codefuture-io/openpitrix/pkg/pb/metadata/drone"
+	pbtypes "github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
 )
 
 func MustLoadConfdConfig(path string) *pbtypes.ConfdConfig {

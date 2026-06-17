@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewUserJoinMarketParams creates a new UserJoinMarketParams object
@@ -59,7 +59,8 @@ func NewUserJoinMarketParamsWithHTTPClient(client *http.Client) *UserJoinMarketP
 	}
 }
 
-/*UserJoinMarketParams contains all the parameters to send to the API endpoint
+/*
+UserJoinMarketParams contains all the parameters to send to the API endpoint
 for the user join market operation typically these are written to a http.Request
 */
 type UserJoinMarketParams struct {

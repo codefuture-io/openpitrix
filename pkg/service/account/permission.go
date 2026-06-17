@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"strings"
 
-	pbim "codefuture.io/im/pkg/pb"
+	pbim "github.com/codefuture-io/im/pkg/pb"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/sender"
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/sender"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
 )
 
 func CheckGroupsPermission(ctx context.Context, groupIds []string) ([]*pbim.Group, error) {

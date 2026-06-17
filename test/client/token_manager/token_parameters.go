@@ -17,7 +17,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // NewTokenParams creates a new TokenParams object
@@ -59,7 +59,8 @@ func NewTokenParamsWithHTTPClient(client *http.Client) *TokenParams {
 	}
 }
 
-/*TokenParams contains all the parameters to send to the API endpoint
+/*
+TokenParams contains all the parameters to send to the API endpoint
 for the token operation typically these are written to a http.Request
 */
 type TokenParams struct {

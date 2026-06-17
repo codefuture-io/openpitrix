@@ -7,8 +7,8 @@ package drone
 import (
 	"google.golang.org/grpc"
 
-	"openpitrix.io/openpitrix/pkg/manager"
-	pbdrone "openpitrix.io/openpitrix/pkg/pb/metadata/drone"
+	"github.com/codefuture-io/openpitrix/pkg/manager"
+	pbdrone "github.com/codefuture-io/openpitrix/pkg/pb/metadata/drone"
 )
 
 type Server struct {

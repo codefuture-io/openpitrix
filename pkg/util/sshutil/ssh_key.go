@@ -7,7 +7,7 @@ package sshutil
 import (
 	"fmt"
 
-	"openpitrix.io/openpitrix/pkg/util/passphraseless"
+	"github.com/codefuture-io/openpitrix/pkg/util/passphraseless"
 )
 
 func MakeSSHKeyPair(keyType string) (string, string, error) {

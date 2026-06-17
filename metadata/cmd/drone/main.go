@@ -16,13 +16,13 @@ import (
 
 	"github.com/urfave/cli"
 
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/logger"
-	"openpitrix.io/openpitrix/pkg/pb/metadata/types"
-	"openpitrix.io/openpitrix/pkg/service/metadata/drone"
-	"openpitrix.io/openpitrix/pkg/service/metadata/drone/droneutil"
-	"openpitrix.io/openpitrix/pkg/util/pathutil"
-	"openpitrix.io/openpitrix/pkg/version"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/logger"
+	"github.com/codefuture-io/openpitrix/pkg/pb/metadata/types"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/drone"
+	"github.com/codefuture-io/openpitrix/pkg/service/metadata/drone/droneutil"
+	"github.com/codefuture-io/openpitrix/pkg/util/pathutil"
+	"github.com/codefuture-io/openpitrix/pkg/version"
 )
 
 func main() {

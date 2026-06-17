@@ -7,13 +7,13 @@ import (
 	"github.com/asaskevich/govalidator"
 	"github.com/ghodss/yaml"
 
-	providerclient "openpitrix.io/openpitrix/pkg/client/runtime_provider"
-	"openpitrix.io/openpitrix/pkg/constants"
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/pb"
-	"openpitrix.io/openpitrix/pkg/plugins"
-	"openpitrix.io/openpitrix/pkg/util/pbutil"
+	providerclient "github.com/codefuture-io/openpitrix/pkg/client/runtime_provider"
+	"github.com/codefuture-io/openpitrix/pkg/constants"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/pb"
+	"github.com/codefuture-io/openpitrix/pkg/plugins"
+	"github.com/codefuture-io/openpitrix/pkg/util/pbutil"
 )
 
 func ValidateURL(ctx context.Context, url string) error {

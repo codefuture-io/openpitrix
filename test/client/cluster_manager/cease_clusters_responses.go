@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"openpitrix.io/openpitrix/test/models"
+	"github.com/codefuture-io/openpitrix/test/models"
 )
 
 // CeaseClustersReader is a Reader for the CeaseClusters structure.
@@ -42,7 +42,8 @@ func NewCeaseClustersOK() *CeaseClustersOK {
 	return &CeaseClustersOK{}
 }
 
-/*CeaseClustersOK handles this case with default header values.
+/*
+CeaseClustersOK handles this case with default header values.
 
 A successful response.
 */

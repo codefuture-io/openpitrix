@@ -13,7 +13,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"openpitrix.io/openpitrix/pkg/devkit/opapp"
+	"github.com/codefuture-io/openpitrix/pkg/devkit/opapp"
 )
 
 // Reference: vendor/k8s.io/helm/pkg/chartutil/save.go:97

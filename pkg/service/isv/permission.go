@@ -7,9 +7,9 @@ package isv
 import (
 	"context"
 
-	"openpitrix.io/openpitrix/pkg/gerr"
-	"openpitrix.io/openpitrix/pkg/models"
-	"openpitrix.io/openpitrix/pkg/util/ctxutil"
+	"github.com/codefuture-io/openpitrix/pkg/gerr"
+	"github.com/codefuture-io/openpitrix/pkg/models"
+	"github.com/codefuture-io/openpitrix/pkg/util/ctxutil"
 )
 
 func CheckAppVendorPermission(ctx context.Context, appVendorUserID string) (*models.VendorVerifyInfo, error) {

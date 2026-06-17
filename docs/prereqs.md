@@ -58,8 +58,8 @@ There are two options to get OpenPitrix source code and build the project:
 **You have a working Go environment.**
 
 ```shell
-$ go get -d openpitrix.io/openpitrix
-$ cd $GOPATH/src/openpitrix.io/openpitrix
+$ go get -d github.com/codefuture-io/openpitrix
+$ cd $GOPATH/src/github.com/codefuture-io/openpitrix
 $ make all
 ```
 
